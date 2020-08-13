@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+<!DOCTYPE html PUBLIC>
 <html>
 <head>
 	<title>Simile</title>
@@ -21,21 +22,19 @@ button{
 }
 </style>
 <body>
-<table border="0" cellspacing="5">
-	<thead cellspacing="30">
+<table border="1" cellspacing="5">
 		<tr>
+			<td rowspan="8"width ="500" height="300"></td>
 			<td><label><strong>Simile</label></td>
 		</tr>
 		<tr>
 			<td><label>Attendance</label></td>
 		</tr>	
-	</thead>
-	<tbody>
 		<tr>
 			<td><label for ="ID"><strong>ID</label></td>
 		</tr>
 		<tr>
-			<td><input id="pass" type="text" size="30" value=""></td>
+			<td><input id="ID" type="text" size="30" value=""></td>
 		</tr>
 		<tr>
 			<td><label for ="pass"><strong>Password</label></td>
@@ -43,14 +42,15 @@ button{
 		<tr>
 			<td><input id="pass" type="password" size="30" value=""></td>
 		</tr>
-	</tbody>
-	<tfoot>
 		<tr>
-			<td><button>ok</button></td>
+			<td><button>ok</button><button onclick="showpopup();" >new</button></td>
 		</tr>
-		<tr>
-			<td><button>new</button></td>
-		</tr>
-	</tfoot>
+</table>
 </body>
+<script type="text/javascript">
+	function showpopup() {
+		var url ="";
+  		window.open("/WEB-INF/views/subscription.jsp/", "NEW", "width=300, height=360");
+	}
+</script>
 </html>
