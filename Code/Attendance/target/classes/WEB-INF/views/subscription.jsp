@@ -7,46 +7,180 @@
 	<title>Simile</title>
 </head>
 <style>
-body{
-	text-align : center;
-	background-color: #F5F6F7
+a {
+    color: #333;
+    text-decoration: none;
+}
+table{
+        width: 320px;
+        margin: 0 auto;
+}
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+.inner_login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -145px 0 0 -160px;
+}
+.login_t{
+        position: relative;
+        width: 320px;
+        margin: 0 auto;
+    }
+.screen_out {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    text-indent: -9999px;    
+}
+body, button, input, select, td, textarea, th {
+    font-size: 13px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}    
+fieldset, img {
+    border: 0;
+}
+.login_t .box_login {
+    margin: 10px 10 10;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.login_t .inp_text {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 18px 19px 19px;
+    box-sizing: border-box;
+}
+.login_t .inp_text+.inp_text {
+    border-top: 1px solid #ddd;
+}
+.inp_text input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    color: #000;
+    border: none;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+}
+.btn_login {
+    margin: 20px 0 0;
+    width: 100%;
+    height: 48px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
 }
 
-table{
-height: 100px;
-margin: auto;
-text-align: center;
-}
-button{
-	background-color : #2db400;
-	color : #ffffff;
+.btn_new {
+    margin: 20px 0 0;
+    width: 25%;
+    height: 24px;
+    border-radius: 3px;
+    font-size: 10px;
+    color: #fff;
+    background-color: #000;
 }
 </style>
-<body>
-	<table border="1" cellspacing="5" width ="500" height="300">
-		<tr>
-			<td colspan ="2"><strong>등록화면</td>
-		</tr>
-		<tr>
-			<td><label for ="NAME"><strong>이름</label></td>
-			<td><input id="NAME" type="text" size="30" value=""></td>
-		</tr>
-		<tr>
-			<td><label for ="NUMBLE"><strong>사원번호</label></td>
-			<td><input id="NUMBLE" type="text" size="30" value=""></td>
-		</tr>
-		<tr>
-			<td><label for ="ID"><strong>아이디</label></td>
-			<td><input id="ID" type="text" size="30" value=""></td>
-		</tr>
-		<tr>
-			<td><label for ="PASSWORD"><strong>패스워드</label></td>
-			<td><input id="PASSWORD" type="text" size="30" value=""></td>
-		</tr>
-		<tr>
-			<td colspan="2"><button>ok</button><button>close</button></td>
-		</tr>
-		
-	</table>
+<body bgcolor='#91A8d0';>
+<div class="inner_login">
+    <div class="login_t">
+        <form method="post" id="authForm">
+            <input type="hidden" name="redirectUrl">
+
+            <fieldset>
+<table border="0">
+<tr>	
+	<td>
+	 <label >이름</label>
+	</td>
+	<td>
+            <div class="box_login">
+                <div class="inp_text">
+                <label for="loginId" class="screen_out">아이디</label>
+                <input type="email" id="loginId" name="loginId" placeholder="Name" >
+                </div>
+	</div>
+	</td>
+</tr>
+<tr>
+	<td>
+		 <label >사원번호</label>
+	</td>
+	<td>
+            <div class="box_login">
+                <div class="inp_text">
+                <label for="loginId" class="screen_out">아이디</label>
+                <input type="email" id="loginId" name="loginId" placeholder="Number" >
+                </div>
+	</div>
+	</td>
+</tr>
+<tr>
+	<td>
+		 <label >아이디</label>
+	</td>
+	<td>
+            <div class="box_login">
+                <div class="inp_text">
+                <label for="loginId" class="screen_out">아이디</label>
+                <input type="email" id="loginId" name="loginId" placeholder="ID" >
+                </div>
+	</div>
+	</td>
+</tr>
+<tr>
+	<td>
+		 <label >비밀번호</label>
+	</td>
+	<td>
+            <div class="box_login">
+                <div class="inp_text">
+                <label for="loginId" class="screen_out">아이디</label>
+                <input type="email" id="loginId" name="loginId" placeholder="PassWord" >
+                </div>
+	</div>
+	</td>
+</tr>
+</table>
+            <button type="submit" class="btn_login"  disabled>회원가입</button>
+            </div>
+            
+            </fieldset>
+        </form>
+ 
+    </div>
+</div>
 </body>
 </html>
