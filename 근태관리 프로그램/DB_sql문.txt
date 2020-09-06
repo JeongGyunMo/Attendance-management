@@ -1,0 +1,69 @@
+CREATE TABLE c##jgm.employee (
+    employee_id      VARCHAR2(50 BYTE) NOT NULL,
+    password         VARCHAR2(50 BYTE) NOT NULL,
+    employee_number  VARCHAR2(8 BYTE) NOT NULL,
+    employee_nm      VARCHAR2(45 BYTE),
+    employee_date    DATE NOT NULL,
+    schedule_to_day  DATE NOT NULL
+)
+PCTFREE 10 PCTUSED 40 TABLESPACE users LOGGING
+    STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+NO INMEMORY;
+
+CREATE UNIQUE INDEX c##jgm.employee_pk ON
+    c##jgm.employee (
+        employee_id
+    ASC )
+        TABLESPACE users PCTFREE 10
+            STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+        LOGGING;
+
+ALTER TABLE c##jgm.employee
+    ADD CONSTRAINT employee_pk PRIMARY KEY ( employee_id )
+        USING INDEX c##jgm.employee_pk;
+
+--------------------------------------------------------------------------------------
+
+CREATE TABLE c##jgm.holiday (
+    to_day             DATE NOT NULL,
+    classification     VARCHAR2(45 BYTE),
+    attendance_time    DATE,
+    leavework_time     DATE,
+    recess_time        DATE,
+    actual_time        DATE,
+    over_time          DATE,
+    nightduty_time     DATE,
+    holiday_time       DATE,
+    holidaynight_time  DATE,
+    word_details       VARCHAR2(45 BYTE),
+    vacation_day       DATE
+)
+PCTFREE 10 PCTUSED 40 TABLESPACE users LOGGING
+    STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+NO INMEMORY;
+
+CREATE UNIQUE INDEX c##jgm.holiday_pk ON
+    c##jgm.holiday (
+        to_day
+    ASC )
+        TABLESPACE users PCTFREE 10
+            STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+        LOGGING;
+
+ALTER TABLE c##jgm.holiday
+    ADD CONSTRAINT holiday_pk PRIMARY KEY ( to_day )
+        USING INDEX c##jgm.holiday_pk;
+
+----------------------------------------------------------------------------------------
+CREATE TABLE c##jgm.vacation (
+    vacation_day        DATE NOT NULL,
+    vacation_end        DATE NOT NULL,
+    vacation_type       VARCHAR2(45 BYTE),
+    vacation_reason     VARCHAR2(45 BYTE),
+    vacation_reference  VARCHAR2(45 BYTE)
+)
+PCTFREE 10 PCTUSED 40 TABLESPACE users LOGGING
+    STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+NO INMEMORY;
+
+ALTER TABLE c##jgm.vacation ADD CONSTRAINT vacation_pk PRIMARY KEY ( vacation_day );
