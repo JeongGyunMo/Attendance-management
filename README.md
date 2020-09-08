@@ -33,7 +33,8 @@ Excel
 
 * DB_ER
 >다이어그램
-![DB_ER다이어그램](https://user-images.githubusercontent.com/37145125/92296946-1f167900-ef75-11ea-8ff5-00a9198385a0.png)
+![DB_Oracle_ER](https://user-images.githubusercontent.com/37145125/92441127-999aff00-f1e8-11ea-898f-40fac42261a4.png)
+
 
 ---------
 ## 참고 사이트
