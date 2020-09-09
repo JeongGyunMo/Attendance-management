@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>�ް� ��û</title>
+<title>休暇の申し込み</title>
 </head>
 <style>
 	table{
@@ -17,7 +17,7 @@
 	<table border="1">
 		<tr align ="center" height = "10%">
 			<td style = " background : #B7DEE8;">
-				��¥
+				日付
 			</td>
 			<td style = " background : #B7DEE8;" colspan = "4">
 				
@@ -25,54 +25,54 @@
 		</tr>
 		<tr>
 			<td align ="center" style = "background : #B7DEE8;">
-				���±���
+				勤怠区分
 			</td>
 			<td colspan = "4">
 			</td>
 		</tr>
 		<tr>
 			<td align ="center" style = "background : #B7DEE8;">
-				���� / ����
+				開始  ／  終了
 			</td>
 			<td colspan = "4">
 			</td>
 		</tr>
 		<tr>
 			<td align ="center" style = "background : #B7DEE8;">
-			 �޽Ľð�
+			 休憩時間
 			</td>
 			<td colspan = "4">
 			</td>
 		</tr>
 		<tr>
 			<td align ="center" style = "background : #B7DEE8;">
-			 �۾�����
+			 作業内容
 			</td>
 			<td colspan = "4">
 			</td>
 		</tr>
 		<tr>
 			<td align ="center" style = "background : #B7DEE8;">
-			 �ް���û
+			 休暇申請
 			</td>
 			<td colspan = "4">
 			</td>
 		</tr>
 		<tr>
 			<td style = "background : #B7DEE8;">
-			�ǽð�
+			リアルタイム
 			</td>
 			<td style = "background : #B7DEE8;">
-			�ð���
+			時間外
 			</td>
 			<td style = "background : #B7DEE8;">
-			�ɾ�
+			深夜
 			</td>
 			<td style = "background : #B7DEE8;">
-			��������
+			法定休日
 			</td>
 			<td style = "background : #B7DEE8;">
-			�������� �ɾ�
+			法定休日深夜
 			</td>
 		</tr>
 		<tr>
@@ -94,8 +94,8 @@
 		</tr>
 	</table>
 	<div style="position: fixed; right: 50px; bottom:20px;">
-			<button type="submit" style = " background : #E4DCF0;width: 300px;height: 80px;">����</button>
-			<button type="submit" style = " background : #E4DCF0;width: 300px;height: 80px;">�ݱ�</button>
+			<button type="submit" style = " background : #E4DCF0;width: 300px;height: 80px;">更新</button>
+			<button type="submit" style = " background : #E4DCF0;width: 300px;height: 80px;">閉口</button>
 	</div>
 
 </body>

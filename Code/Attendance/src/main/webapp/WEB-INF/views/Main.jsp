@@ -23,10 +23,10 @@ table{
 		</tr>
 		<tr>
 			<td>
-			 <button type="submit"style = " background : #FCD5B5; font-size:2em;width: 100%;height: 100%;">Γβ±Ω</button>
+			 <button type="submit"style = " background : #FCD5B5; font-size:2em;width: 100%;height: 100%;">υσΠΓ</button>
 			</td>
 			<td>
-			 <button type="submit" style = " background : #E4DCF0; font-size:2em;width: 100%;height: 100%;">Επ±Ω</button>
+			 <button type="submit" style = " background : #E4DCF0; font-size:2em;width: 100%;height: 100%;">χάήδ</button>
 			</td>
 			<td rowspan="5">
 			</td>

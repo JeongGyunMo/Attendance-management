@@ -118,20 +118,20 @@ fieldset, img {
             <legend class="screen_out">로그인 정보 입력폼</legend>
             <div class="box_login">
                 <div class="inp_text">
-                <label for="loginId" class="screen_out">아이디</label>
+                <label for="loginId" class="screen_out">ID</label>
                 <input type="email" id="loginId" name="loginId" placeholder="ID" >
                 </div>
                 <div class="inp_text">
-                <label for="loginPw" class="screen_out">비밀번호</label>
+                <label for="loginPw" class="screen_out">PassWord</label>
                 <input type="password" id="loginPw" name="password" placeholder="Password" >
                 </div>
             </div>
-            <button type="submit" class="btn_login"  disabled>로그인</button>
-            <button type="submit" class="btn_new"  disabled>회원가입</button>
+            <button type="submit" class="btn_login"  disabled>Login</button>
+            <button type="submit" class="btn_new"  disabled>New</button>
                 <span class="txt_find">
-                <a href="/member/find/loginId" class="link_find">아이디</a>
+                <a href="/member/find/loginId" class="link_find">ID検索</a>
                     / 
-                <a href="/member/find/password" class="link_find">비밀번호 찾기</a>
+                <a href="/member/find/password" class="link_find">PassWord検索</a>
                 </span>
             </div>
             

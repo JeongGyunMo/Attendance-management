@@ -123,12 +123,12 @@ fieldset, img {
 <table border="0">
 <tr>	
 	<td>
-	 <label >이름</label>
+	 <label >名前</label>
 	</td>
 	<td>
             <div class="box_login">
                 <div class="inp_text">
-                <label for="loginId" class="screen_out">아이디</label>
+                <label for="loginId" class="screen_out">ID</label>
                 <input type="email" id="loginId" name="loginId" placeholder="Name" >
                 </div>
 	</div>
@@ -136,12 +136,12 @@ fieldset, img {
 </tr>
 <tr>
 	<td>
-		 <label >사원번호</label>
+		 <label >社員番号</label>
 	</td>
 	<td>
             <div class="box_login">
                 <div class="inp_text">
-                <label for="loginId" class="screen_out">아이디</label>
+                <label for="loginId" class="screen_out">ID</label>
                 <input type="email" id="loginId" name="loginId" placeholder="Number" >
                 </div>
 	</div>
@@ -149,12 +149,12 @@ fieldset, img {
 </tr>
 <tr>
 	<td>
-		 <label >아이디</label>
+		 <label >ID</label>
 	</td>
 	<td>
             <div class="box_login">
                 <div class="inp_text">
-                <label for="loginId" class="screen_out">아이디</label>
+                <label for="loginId" class="screen_out">ID</label>
                 <input type="email" id="loginId" name="loginId" placeholder="ID" >
                 </div>
 	</div>
@@ -162,19 +162,19 @@ fieldset, img {
 </tr>
 <tr>
 	<td>
-		 <label >비밀번호</label>
+		 <label >PassWord</label>
 	</td>
 	<td>
             <div class="box_login">
                 <div class="inp_text">
-                <label for="loginId" class="screen_out">아이디</label>
+                <label for="loginId" class="screen_out">ID</label>
                 <input type="email" id="loginId" name="loginId" placeholder="PassWord" >
                 </div>
 	</div>
 	</td>
 </tr>
 </table>
-            <button type="submit" class="btn_login"  disabled>회원가입</button>
+            <button type="submit" class="btn_login"  disabled>会員加入</button>
             </div>
             
             </fieldset>

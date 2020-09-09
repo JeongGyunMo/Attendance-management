@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>ÈÞ°¡ ½ÅÃ»</title>
+<title>ä¼‘æš‡ã®ç”³ã—è¾¼ã¿</title>
 </head>
 <style>
 	table{
@@ -17,7 +17,7 @@
 	<table border="1">
 		<tr align ="center" height = "10%">
 			<td style = "background : #B7DEE8;">
-				½ÅÃ»ÀÔ·Â
+				ç”³è«‹å…¥åŠ›
 			</td>
 			<td style = " background : #B7DEE8;" colspan = "3">
 				
@@ -25,36 +25,36 @@
 		</tr>
 		<tr>
 			<td align ="center" style = "background : #B7DEE8;">
-				Á¾º°
+				ç¨®åˆ¥
 			</td>
 			<td colspan = "3">
-			¼±ÅÃ
+			é¸æŠž
 			</td>
 		</tr>
 		<tr>
 			<td align ="center" style = "background : #B7DEE8;">
-				ÈÞ°¡°³½ÃÀÏ
+				ä¼‘æš‡é–‹å§‹æ—¥
 			</td>
 			<td>
-			³¯Â¥¼±ÅÃ
+			æ—¥ä»˜é¸æŠž
 			</td>
 			<td style = "background : #B7DEE8;" align ="center">
-			ÈÞ°¡Á¾·áÀÏ
+			ä¼‘æš‡çµ‚äº†æ—¥
 			</td>
 			<td>
-			³¯Â¥¼±ÅÃ
+			æ—¥ä»˜é¸æŠž
 			</td>
 		</tr>
 		<tr>
 			<td align ="center" style = "background : #B7DEE8;">
-			 ÈÞ½ÄÀÌÀ¯
+			 ä¼‘æ¯ç†ç”±
 			</td>
 			<td colspan = "3">
 			</td>
 		</tr>
 		<tr>
 			<td align ="center" style = "background : #B7DEE8;">
-			Âü°í
+			å‚è€ƒ
 			</td>
 			<td colspan = "3">
 			</td>
@@ -62,8 +62,8 @@
 
 	</table>
 	<div style="position: fixed; right: 50px; bottom:20px;">
-			<button type="submit" style = " background : #E4DCF0;width: 300px;height: 80px;">½ÅÃ» µî·Ï</button>
-			<button type="submit" style = " background : #E4DCF0;width: 300px;height: 80px;">´Ý±â</button>
+			<button type="submit" style = " background : #E4DCF0;width: 300px;height: 80px;">ç”³è«‹ç™»éŒ²</button>
+			<button type="submit" style = " background : #E4DCF0;width: 300px;height: 80px;">é–‰å£</button>
 	</div>
 
 </body>
