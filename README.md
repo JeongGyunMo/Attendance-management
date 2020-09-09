@@ -35,7 +35,19 @@ Excel
 >다이어그램
 ![DB_Oracle_ER](https://user-images.githubusercontent.com/37145125/92441127-999aff00-f1e8-11ea-898f-40fac42261a4.png)
 
-
+---------
+## 개선방안
+1. 언어를 전부 일본어로 변경
+2. 스타일들은 따로 css 파일 작성
+3. 엔티티, DB, 환경설정 변경
+    >https://qiita.com/ozaki25/items/fe5fc876bd55a9d7daa9
+    https://qiita.com/rubytomato@github/items/cb7c40cea2ff3225d5e3
+4. DB에 작성자id, 갱신자, create_time, update_time 추가
+5. 커멘트 변경, 작성
+6. 자동 주석 생성
+    >https://hermeslog.tistory.com/308
+7. checkstyle 생성
+    >http://www.develop-memo.com/java/eclipseplugin/checkstyle.html
 ---------
 ## 참고 사이트
     https://shiftee.io/ko
