@@ -1,0 +1,63 @@
+안녕하세요, 안은별 입니다!
+
+제가 오라클 DB를 spring에 연동하기 위해 추가적으로 바꾼 사항입니다.
+다들 다르게  테스트 할 수도 있어서 무조건 이것을 추가하라는 것은 아닙니다!
+
+1) pom.xml
+  - java-version 부분을 1.6에서 1.8로 변경.
+    why? JAVA JDK 버전 오류로 인해 버전을 상향 업그레이드 시켜주었습니다.
+    오류내용 : Resource specification not allowed here for source level below 1.7
+    오류번역 : jdk의 버전이 1.7 미만이여서 발생하는 오류
+  - framework-version 부분도 5.0.7.RELEASE로 변경.
+  - lombok을 추가함 (Log4j를 사용하기 위해)
+  <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+    		<groupId>org.projectlombok</groupId>
+    		<artifactId>lombok</artifactId>
+    		<version>1.16.16</version>
+		</dependency>
+
+2) 위의 java-version 부분을 1.8로 변경했으므로 project의 Properties -> Java Build Path -> Libraries 에서
+   JRE System Library [JavaSE-1.6]을 지우고 오른쪽 부분의 Add Library...를 클릭해 JRE System Library 클릭 후,
+   Execution environment를 클릭해서 select 부분의 JavaSE-1.8을 추가했습니다.
+
+3) DB 연결 여부를 위해 project -> java Resources -> src/test/java에 패키지와 폴더추가.
+  - 패키지 이름 : jp.ac.persistence
+  - 클래스 이름 : JDBCTests
+  - 클래스 내용 : 밑에 부분을 참고해주세요!
+
+------------------------------------------------------------------------------------------------------------------------------
+package jp.ac.persistence;
+
+import static org.junit.Assert.fail;
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import org.junit.Test;
+
+import lombok.extern.log4j.Log4j;
+
+@Log4j
+public class JDBCTests {
+	static {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	// 테스트코드 작성, conn 객체 생성
+	@Test
+	public void testConnection() {
+		try(Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe",
+				"pro_attendance",
+				"1234")) {
+			log.info(conn);
+		} catch (Exception e) {
+			fail(e.getMessage());
+		}
+	}
+}
+
+ * 저의 SID 값은 xe, user 명은 pro_attendance, 패스워드는 1234 입니다. 테스트 시 자신들에게 맞는 것으로 바꿔서 실행해보세요!
