@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-encoding//src/main/webapp/WEB-INF/views/Popup_Vacation.jsp=UTF-8
-encoding//src/main/webapp/WEB-INF/views/Popup_apply.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/home.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/popup_apply.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/popup_vacation.jsp=UTF-8

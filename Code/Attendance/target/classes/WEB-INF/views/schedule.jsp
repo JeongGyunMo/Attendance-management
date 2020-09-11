@@ -5,14 +5,9 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+	<link rel="stylesheet" type="text/css" href="/resources/css/schedule.css"/>
 </head>
-<style>
-table{
-        width: 95%;
-	    height: 95%;
-        margin: 0 auto;
-}
-</style>
+
 
 <body bgcolor='#91A8d0';>
 	<table border="1">

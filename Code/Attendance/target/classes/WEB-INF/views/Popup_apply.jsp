@@ -5,14 +5,8 @@
 <head>
 <meta charset="EUC-KR">
 <title>休暇の申し込み</title>
+	<link rel="stylesheet" type="text/css" href="/resources/css/popup_apply.css"/>
 </head>
-<style>
-	table{
-        width: 95%;
-	    height: 85%;
-        margin: 0 auto;
-	}
-</style>
 <body bgcolor='#91A8d0';>
 	<table border="1">
 		<tr align ="center" height = "10%">
@@ -95,8 +89,7 @@
 	</table>
 	<div style="position: fixed; right: 50px; bottom:20px;">
 			<button type="submit" style = " background : #E4DCF0;width: 300px;height: 80px;">更新</button>
-			<button type="submit" style = " background : #E4DCF0;width: 300px;height: 80px;">閉口</button>
+			<button type="submit" style = " background : #E4DCF0;width: 300px;height: 80px;">ｂ</button>
 	</div>
-
 </body>
 </html>
