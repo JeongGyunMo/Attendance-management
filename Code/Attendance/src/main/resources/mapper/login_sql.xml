@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
-<mapper namespace="jp.ac.service.dao.serviceDAO">
-
- <select id="selectProjectList" resultType="entity">
-	SELECT 	PRO_ID, 
-		PRO_TITLE, 
-		PRO_BODY, 
-		PRO_DATE 
-		FROM TB_PROJECT
-	ORDER BY PRO_ID DESC
- </select>
-
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="login">
+	<select id="getInfo" resultType="LoginVO">
+		SELECT EMPLOYEE_ID
+		, PASSWAORD
+		FROM EMPLOYEE
+		WHERE USERID='내가 입력한 데이터'
+	</select>
 </mapper>

@@ -8,6 +8,6 @@
           <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
     <typeAliases>
-          <typeAlias alias="entity" type="jp.ac.entity.entity"/>
+          <typeAlias alias="LoginVO" type="jp.ac.login.dto.loginVO"/>
     </typeAliases>
 </configuration>

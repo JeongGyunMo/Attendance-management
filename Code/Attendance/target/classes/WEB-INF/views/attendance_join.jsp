@@ -10,7 +10,7 @@
 <body bgcolor='#91A8d0';>
 	<div class="inner_login">
     	<div class="login_t">
-	   		<form method="post" id="authForm">
+	   		<form action='c:url value="/page/join_data" />' method="post" id="join_data">
 				<input type="hidden" name="redirectUrl">
 				<table border="0">
 					<tr>	
