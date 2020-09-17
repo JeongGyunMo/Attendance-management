@@ -1,7 +1,12 @@
 package jp.ac.Service;
 
-import jp.ac.util.JoinRequest;
+import java.io.IOException;
+import java.util.List;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import jp.ac.DTO.JoinDTO;
 
-public interface JoinService {
-	void register(JoinRequest regReq) throws Exception;
+public interface JoinService { 
+	// 회원가입 프로세스
+	public void JoinProcess(JoinDTO dto);
 }

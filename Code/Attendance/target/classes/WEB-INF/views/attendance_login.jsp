@@ -10,7 +10,7 @@
 <body bgcolor='#91A8d0'>
 	<div class="inner_login">
 		<div class="login_t">
-			<form method="post" id="authForm">
+			<form method="post" id="authForm" >
 				<input type="hidden" name="redirectUrl">
 				<div class="box_login">
 					<div class="inp_text">

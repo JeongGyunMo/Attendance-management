@@ -1,23 +1,18 @@
 package jp.ac.Service;
 
-import javax.annotation.Resource;
-
-import org.springframework.stereotype.Service;
-
+import java.io.IOException;
+import java.util.List;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import jp.ac.DAO.JoinDAO;
-import jp.ac.VO.JoinVO;
-import jp.ac.util.JoinRequest;
+import jp.ac.DTO.JoinDTO;
 
-@Service("JoinService")
 public class JoinServiceImpl implements JoinService {
-	@Resource(name="JoinDAO")
-    private JoinDAO joinDAO;
- 
-    @Override
-    public void register(JoinRequest regReq) throws Exception {
-        JoinVO id = joinDAO.selectById(regReq.getId());
-        joinDAO.insertUser(regReq);
-    }
+	private JoinDAO dao;
 
-
+	public void setDao(JoinDAO dao) { this.dao = dao; } 
+	@Override
+	public void JoinProcess(JoinDTO dto) {
+		dao.JoinMethod(dto);
+	}
 }

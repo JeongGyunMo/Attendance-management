@@ -1,19 +1,9 @@
 package jp.ac.DAO;
 
-import org.springframework.stereotype.Repository;
-import jp.ac.VO.JoinVO;
-import jp.ac.util.JoinRequest;
-import jp.ac.DAO.AbstractDAO;
-
-@Repository("JoinDAO")
-public class JoinDAO {
-	AbstractDAO a = new AbstractDAO();
-    public JoinVO selectById(String id) {
-        return (JoinVO)a.selectOne("user.selectById", id);
-    }
- 
-    public void insertUser(JoinRequest regReq) {
-        a.insert("user.register", regReq);
-    }
-
+import java.util.List;
+import javax.servlet.http.HttpSession;
+import jp.ac.DTO.JoinDTO;
+public interface JoinDAO {
+	// 회원가입 메소드
+	public void JoinMethod(JoinDTO vo);
 }
