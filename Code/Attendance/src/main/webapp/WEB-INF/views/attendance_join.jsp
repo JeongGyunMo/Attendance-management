@@ -9,7 +9,7 @@
 <body bgcolor='#91A8d0';>
 	<div class="inner_login">
     	<div class="login_t">
-    	<form role="form" action="newjoin.do" method="post">
+    	<form role="form" action="join" method="post">
 				<input type="hidden" name="redirectUrl">
 				<table border="0">
 					<tr>	
@@ -19,8 +19,8 @@
 						<td>
 		            		<div class="box_login">
 		                		<div class="inp_text">
-		                			<label for="loginId" class="screen_out">NM</label>
-		                			<input type="text" id="name" name="name" placeholder="Name" >
+		                			<label for="loginId" class="screen_out">Name</label>
+		                			<input type="text" id="EMPLOYEE_NM" name="EMPLOYEE_NM" placeholder="Name" >
 		                		</div>
 							</div>
 						</td>
@@ -33,7 +33,7 @@
 		          		<div class="box_login">
 		                	<div class="inp_text">
 		                		<label for="loginId" class="screen_out">Number</label>
-		                			<input type="number" id="number" name="number" placeholder="Number" >
+		                			<input type="text" id="EMPLOYEE_NUMBER" name="EMPLOYEE_NUMBER" placeholder="Number" >
 		                	</div>
 						</div>
 					</td>
@@ -46,7 +46,7 @@
 		    		        <div class="box_login">
 								<div class="inp_text">
 									<label for="loginId" class="screen_out">ID</label>
-		               				<input type="email" id="id" name="id" placeholder="ID" >
+		               				<input type="email" id="EMPLOYEE_ID" name="EMPLOYEE_ID" placeholder="ID" >
 		                		</div>
 							</div>
 						</td>
@@ -59,7 +59,7 @@
 							<div class="box_login">
 		        				<div class="inp_text">
 		             				<label for="loginId" class="screen_out">PassWord</label>
-                    				<input type="password" id="passwrd" name="passwrd" placeholder="PassWord" >
+                    				<input type="password" id="PASSWORD" name="PASSWORD" placeholder="PassWord" >
 		            			</div>
 							</div>
 						</td>

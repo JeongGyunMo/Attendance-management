@@ -4,8 +4,8 @@ import lombok.*;
 
 @Data
 public class JoinDTO {
-	private String id;
-	private String passwrd;
-	private String name;
-	private String number;
+	private String EMPLOYEE_ID;
+	private String PASSWORD;
+	private String EMPLOYEE_NUMBER;
+	private String EMPLOYEE_NM;
 }

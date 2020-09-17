@@ -8,21 +8,21 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import jp.ac.DTO.JoinDTO;
-import jp.ac.Service.*;
-
+import jp.ac.Service.JoinService;
+import jp.ac.Service.JoinServiceImpl;
 /**
  * Handles requests for the application home page.
  */
 @Controller
 public class HomeController {
-	JoinServiceImpl js = new JoinServiceImpl();
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-
+	JoinService joinservice;
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -60,14 +60,12 @@ public class HomeController {
 	public String attendance_join(Locale locale, Model model) {
 		return "attendance_join";
 	}
-
-	@RequestMapping(value = "newjoin.do", method = RequestMethod.POST)
-	public ModelAndView memberJoinPro(JoinDTO dto) {
-		logger.info("Welcome home! The client locale is {}.");
-		ModelAndView mav = new ModelAndView();
-		JoinService.JoinProcess(dto);
-		mav.setViewName("/attendance_login");
-		return mav;
+	
+	@RequestMapping(value = "/join", method = RequestMethod.POST)
+	public String join(JoinDTO dto) {
+		System.out.println("회원가입신호");
+			joinservice.Join(dto);
+		return "redirect:/";
 	}
 
 }

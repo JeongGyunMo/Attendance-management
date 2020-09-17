@@ -1,18 +1,21 @@
 package jp.ac.Service;
 
-import java.io.IOException;
-import java.util.List;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import jp.ac.DAO.JoinDAO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import jp.ac.DAO.JoinDAOImpl;
 import jp.ac.DTO.JoinDTO;
 
-public class JoinServiceImpl implements JoinService {
-	private JoinDAO dao;
-
-	public void setDao(JoinDAO dao) { this.dao = dao; } 
+@Service
+public class JoinServiceImpl implements JoinService{
+	@Autowired
+	JoinDAOImpl JoinDAO;
+	
+	//회원가입
 	@Override
-	public void JoinProcess(JoinDTO dto) {
-		dao.JoinMethod(dto);
+	public void Join(JoinDTO dto) {
+		System.out.println("회원가입 서비스 시작");
+		JoinDAO.join(dto);
+		System.out.println("회원가입 서비스 끝");
 	}
 }

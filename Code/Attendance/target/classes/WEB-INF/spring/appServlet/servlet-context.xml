@@ -22,5 +22,7 @@
 		<beans:property name="suffix" value=".jsp" />
 		
 	</beans:bean>
+	<beans:bean id="JoinService" class="jp.ac.Service.JoinServiceImpl"/>
+	<beans:bean id="JoinDAO" class="jp.ac.DAO.JoinDAOImpl"/> 
 	<context:component-scan base-package="jp.ac.Attendance" />
 </beans:beans>
