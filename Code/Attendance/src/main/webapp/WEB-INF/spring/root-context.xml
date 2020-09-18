@@ -19,8 +19,8 @@
 			value="oracle.jdbc.driver.OracleDriver" />
 		<property name="url"
 			value="jdbc:oracle:thin:@localhost:1521:orcl" />
-		<property name="username" value="system" />
-		<property name="password" value="Jgm_950808" />
+		<property name="username" value="c##JGM"/>
+		<property name="password" value="1234"/>
 	</bean>
 
 
@@ -31,7 +31,7 @@
 		<property name="configLocation"
 			value="classpath:mybatis-config.xml" />
 		<property name="mapperLocations"
-			value="classpath*:/resources/mapper/*.xml" />
+			value="classpath*:/resources/mapper/JoinMapper.xml" />
 	</bean>
 
 	<bean class="org.mybatis.spring.SqlSessionTemplate"
@@ -40,5 +40,5 @@
 			ref="sqlSessionFactory" />
 	</bean>
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	<context:component-scan base-package="DAO" />
+	<context:component-scan base-package="jp.ac.DAO" />
 </beans>
