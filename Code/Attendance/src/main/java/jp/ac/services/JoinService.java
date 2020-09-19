@@ -1,4 +1,4 @@
-package jp.ac.Service;
+package jp.ac.services;
 
 import jp.ac.DTO.JoinDTO;
 

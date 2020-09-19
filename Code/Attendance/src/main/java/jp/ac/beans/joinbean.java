@@ -1,9 +1,8 @@
-package jp.ac.DTO;
+package jp.ac.beans;
 
-import lombok.*;
-
+import lombok.Data;
 @Data
-public class JoinDTO {
+public class joinbean {
 	private String EMPLOYEE_ID;
 	private String PASSWORD;
 	private String EMPLOYEE_NUMBER;

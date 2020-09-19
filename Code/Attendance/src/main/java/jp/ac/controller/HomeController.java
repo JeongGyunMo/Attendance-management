@@ -1,4 +1,4 @@
-package jp.ac.Attendance;
+package jp.ac.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -15,8 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import jp.ac.DTO.JoinDTO;
-import jp.ac.Service.JoinService;
-import jp.ac.Service.JoinServiceImpl;
+import jp.ac.services.JoinService;
+import jp.ac.services.JoinServiceImpl;
+
 /**
  * Handles requests for the application home page.
  */
@@ -25,6 +26,7 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	@Autowired
 	JoinService joinservice;
+
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -62,12 +64,15 @@ public class HomeController {
 	public String attendance_join(Locale locale, Model model) {
 		return "attendance_join";
 	}
-	
+
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
 	public String join(JoinDTO dto) {
 		System.out.println("회원가입신호");
-			joinservice.Join(dto);
+		System.out.println(dto.getEMPLOYEE_ID());
+		System.out.println(dto.getEMPLOYEE_NM());
+		System.out.println(dto.getEMPLOYEE_NUMBER());
+		System.out.println(dto.getPASSWORD());
+		joinservice.Join(dto);
 		return "redirect:/";
 	}
-
 }
