@@ -19,7 +19,7 @@
 *  すべての機能は、リアルタイムでの同期を目標とします。
 開発環境
 *  Spring  Framework  -  MVCモデル
-*  MYSQL
+*  postgreSQL
 *  Apache7.0
 -------
 現況
