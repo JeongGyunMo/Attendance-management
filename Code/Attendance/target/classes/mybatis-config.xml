@@ -4,6 +4,6 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
  <configuration>
     <mappers>
-        <mapper resource="mapper/JoinMapper.xml"/>
+        <mapper resource="src/main/java/jp/ac/mappers/joinmapper.xml"/>
     </mappers>
  </configuration>
