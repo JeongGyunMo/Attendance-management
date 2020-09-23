@@ -1,7 +1,7 @@
 package jp.ac.services;
 
-import jp.ac.DTO.JoinDTO;
+import jp.ac.beans.joinbean;
 
 public interface JoinService {
-	public void Join(JoinDTO dto);
+	public void Join(joinbean bean);
 }

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import jp.ac.DTO.JoinDTO;
+import jp.ac.beans.joinbean;
 import jp.ac.services.JoinService;
 import jp.ac.services.JoinServiceImpl;
 
@@ -66,13 +66,12 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
-	public String join(JoinDTO dto) {
+	public String join(joinbean bean) {
 		System.out.println("회원가입신호");
-		System.out.println(dto.getEMPLOYEE_ID());
-		System.out.println(dto.getEMPLOYEE_NM());
-		System.out.println(dto.getEMPLOYEE_NUMBER());
-		System.out.println(dto.getPASSWORD());
-		joinservice.Join(dto);
+		System.out.println(bean.getEMPLOYEE_ID());
+		System.out.println(bean.getEMPLOYEE_NM());
+		System.out.println(bean.getEMPLOYEE_NUMBER());
+		System.out.println(bean.getPASSWORD());
 		return "redirect:/";
 	}
 }
