@@ -2,20 +2,18 @@ package jp.ac.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-//import jp.ac.DAO.JoinDAOImpl;
 import jp.ac.beans.joinbean;
+import jp.ac.mappers.mainmapper;
 
 @Service
 public class JoinServiceImpl implements JoinService{
 	@Autowired
-	//JoinDAOImpl JoinDAO;
+	private mainmapper main;
 	
-	//회원가입
-	@Override
-	public void Join(joinbean bean) {
-		System.out.println("회원가입 서비스 시작");
-		//JoinDAO.join(dto);
-		System.out.println("회원가입 서비스 끝");
-	}
+    @Transactional
+    public void save(joinbean bean) {
+    	main.join(bean);
+    }
 }
