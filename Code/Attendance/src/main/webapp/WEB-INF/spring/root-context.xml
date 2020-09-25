@@ -17,15 +17,15 @@
 		<property name="locations" value="classpath:/jdbc.properties" />
 		<property name="fileEncoding" value="UTF-8" />
 	</bean>
-	<!-- JDBC-PostgreSQL -->
-	<bean class="org.apache.commons.dbcp.BasicDataSource"
-		id="datasource">
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
-			value="org.postgresql.Driver"></property>
+			value="org.postgresql.Driver" />
 		<property name="url"
-			value="jdbc:postgresql://localhost:5432/postgres"></property>
-		<property name="username" value="postgres"></property>
-		<property name="password" value="1234"></property>
+			value="jdbc:postgresql://localhost:5432/postgres" />
+		<property name="username" value="postgres" />
+		<property name="password" value="5432" />
 	</bean>
 
 	<!-- mybatis SqlSessionFactoryBean -->
@@ -41,5 +41,5 @@
 		<constructor-arg index="0" ref="sqlSessionFactory" />
 	</bean>
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	<context:component-scan base-package="jp.ac.DAO" />
+	<context:component-scan base-package="jp.ac.beans" />
 </beans>
