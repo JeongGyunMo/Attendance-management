@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="jp.ac.Attendance">
+	<logger name="jp.ac.controller">
 		<level value="info" />
 	</logger>
 	
