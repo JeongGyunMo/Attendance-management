@@ -33,7 +33,7 @@ Excel
 
 * DB_ER
 >ダイアグラム
-![DB_Oracle_ER](https://user-images.githubusercontent.com/37145125/92441127-999aff00-f1e8-11ea-898f-40fac42261a4.png)
+![DB](https://user-images.githubusercontent.com/37145125/94522768-1dd22680-026b-11eb-99f5-83512a72b8a7.png)
 
 ---------
 ## 改善策
