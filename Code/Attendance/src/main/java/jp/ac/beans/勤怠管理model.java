@@ -2,7 +2,7 @@ package jp.ac.beans;
 
 import lombok.Data;
 @Data
-public class ĞÃÙâÎ·×âmodel {
+public class ĞÃ÷½Î·×âmodel {
 	private String id;
 	private String pass;
 }

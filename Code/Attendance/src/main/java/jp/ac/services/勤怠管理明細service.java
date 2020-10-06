@@ -1,18 +1,22 @@
 package jp.ac.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import jp.ac.mappers.ĞÃÙâÎ·×âÙ¥á¬mapper;
+import jp.ac.beans.ĞÃ÷½Î·×âmodel;
+import jp.ac.beans.ĞÃ÷½Î·×âÙ¥á¬model;
+import jp.ac.mappers.ĞÃ÷½Î·×âÙ¥á¬mapper;
 
 @Service
-public class ĞÃÙâÎ·×âÙ¥á¬service {
+public class ĞÃ÷½Î·×âÙ¥á¬service {
 	@Autowired
-	private ĞÃÙâÎ·×âÙ¥á¬mapper ĞÃ÷½Î·×âÙ¥á¬mapper;
+	private ĞÃ÷½Î·×âÙ¥á¬mapper ĞÃ÷½Î·×âÙ¥á¬mapper;
 	
 	@Transactional
-	public List<ĞÃ÷½Î·×âÙ¥á¬model> findall(id){
+	public List<ĞÃ÷½Î·×âÙ¥á¬model> findall(ĞÃ÷½Î·×âmodel id){
 		return ĞÃ÷½Î·×âÙ¥á¬mapper.findall(id);
 	}
 }
