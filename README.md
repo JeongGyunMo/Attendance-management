@@ -1,7 +1,7 @@
 # Attendance-management
 ## Attendance-managementとは?
     職員の勤怠管理に必要なすべてを提供するためのプロジェクトです。 MVCモデルを使ったサイトを開設します。
-----------
+--------------
 主要機能
 *  職員
 ```
@@ -21,7 +21,7 @@
 *  Spring  Framework  -  MVCモデル
 *  postgreSQL
 *  Apache7.0
--------
+-----------
 現況
 *  画面設計
 >Main
