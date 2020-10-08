@@ -24,7 +24,7 @@ public class ÐÃ÷½Î·×âÙ¥á¬controller {
 	
 	@GetMapping
 	public String index(Model model, ÐÃ÷½Î·×âmodel id) {
-		List<ÐÃ÷½Î·×âÙ¥á¬model> list = ÐÃ÷½Î·×âÙ¥á¬service.findall(id);
+		List<ÐÃ÷½Î·×âmodel> list = ÐÃ÷½Î·×âÙ¥á¬service.findall(id);
 		model.addAttribute("ÐÃ÷½Î·×âÙ¥á¬List",list);
 		return "ÐÃ÷½Î·×âÙ¥á¬show";
 	}
