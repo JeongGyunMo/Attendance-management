@@ -1,5 +1,0 @@
-package jp.ac.beans;
-
-public class ÐÃ÷½Î·×âÙ¥á¬model {
-
-}
