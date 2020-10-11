@@ -1,4 +1,4 @@
-package jp.ac.attendace;
+package jp.ac.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
