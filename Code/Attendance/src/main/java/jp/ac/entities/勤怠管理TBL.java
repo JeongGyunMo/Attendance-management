@@ -34,6 +34,5 @@ public class 勤怠管理TBL {
 	private String 更新者;
 	private Date 更新日時;
 	
-
-
+	
 }
