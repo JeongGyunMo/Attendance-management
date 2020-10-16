@@ -18,7 +18,7 @@
 ```
 *  すべての機能は、リアルタイムでの同期を目標とします。
 開発環境
-*  Spring  Framework  -  MVCモデル
+*  Spring  Framework  -  Spring boot
 *  postgreSQL
 *  Apache7.0
 -----------
