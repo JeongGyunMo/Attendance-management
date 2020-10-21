@@ -2,6 +2,7 @@
 ## Attendance-managementとは?
     職員の勤怠管理に必要なすべてを提供するためのプロジェクトです。 MVCモデルを使ったサイトを開設します。
 --------------
+
 主要機能
 *  職員
 ```
@@ -19,9 +20,11 @@
 *  すべての機能は、リアルタイムでの同期を目標とします。
 開発環境
 *  Spring  Framework  -  Spring boot
+*  Spring Security
 *  postgreSQL
 *  Apache7.0
 -----------
+
 現況
 *  画面設計
 >Main
@@ -36,6 +39,7 @@ Excel
 ![DB](https://user-images.githubusercontent.com/37145125/94522768-1dd22680-026b-11eb-99f5-83512a72b8a7.png)
 
 ---------
+
 ## 改善策
 1.言語を全て日本語に変更
 2.スタイルは別にcssファイルを作成
@@ -49,5 +53,6 @@ Excel
 7. checkstyle生成
     >http://www.develop-memo.com/java/eclipseplugin/checkstyle.html
 ---------
+
 ## 参考サイト
     https://shiftee.io/ko
