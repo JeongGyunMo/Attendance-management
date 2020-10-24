@@ -20,5 +20,4 @@ public class 共通マスタ {
 	private Timestamp registredtime;//登録日時
 	private String updated;//更新者
 	private Timestamp updatedtime;//更新日時
-
 }
