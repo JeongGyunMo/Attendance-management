@@ -28,12 +28,16 @@
 	</nav>
 
 	<div class="container text-center">
-		<form>
+		<form action="register" method="post">
 			<label>社員ID</label>
 			<input type="text" class="input-field"
 				placeholder="User name or Email" required>
 			<p>
 			<label>部署コード</label>
+			<input type="text" class="input-field"
+				placeholder="User name or Email" required>
+			<p>
+			<label>名前</label>
 			<input type="text" class="input-field"
 				placeholder="User name or Email" required>
 			<p>

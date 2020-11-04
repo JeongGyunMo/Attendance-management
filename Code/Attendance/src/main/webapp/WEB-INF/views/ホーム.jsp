@@ -34,6 +34,7 @@
 				type="password" class="input-field" placeholder="Enter Password"
 				required>
 			<button class="submit">Login</button>
+			<a href="sign">ID検索</a>
 			<button class="btn">SIGN UP</button>
 			<button class="btn">ID/PassWord検索</button>
 		</form>

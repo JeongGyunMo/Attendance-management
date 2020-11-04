@@ -15,7 +15,7 @@ public class 勤怠管理service {
 	private 勤怠管理mapper 勤怠管理mapper;
 	
 	@Transactional
-	public List<勤怠管理model> findall(勤怠管理model id){
-		return 勤怠管理mapper.findAII(id);
+	public List<勤怠管理model> findall(勤怠管理model Account){
+		return 勤怠管理mapper.findAII(Account);
 	}
 }
