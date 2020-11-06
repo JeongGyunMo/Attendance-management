@@ -15,7 +15,7 @@ public class 勤怠管理mapper {
 	@Autowired
 	社員マスタRepository 社員マスタRepository;
 	
-	public List<勤怠管理model> findAII(勤怠管理model Account) {
+	public void findAII(勤怠管理model Account) {
 		社員マスタ 社員マスタ= new 社員マスタ();
 		社員マスタ.setEmployeeid(Account.getEmployeeid());
 		社員マスタ.setDepartcode(Account.getDepartcode());
@@ -34,6 +34,5 @@ public class 勤怠管理mapper {
 		社員マスタ.setUpdated(Account.getUpdated());
 		社員マスタ.setUpdatedtime(Account.getUpdatedtime());
 		社員マスタRepository.save(社員マスタ);
-		return null;
 	}
 }

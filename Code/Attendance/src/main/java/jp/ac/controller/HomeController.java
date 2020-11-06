@@ -30,8 +30,9 @@ public class HomeController {
 	
 	@PostMapping("register")
 	public String register(Model model, 勤怠管理model Account) {
-		List<勤怠管理model> list = 勤怠管理service.findall(Account);
-		model.addAttribute("勤怠管理List",list);
+		//List<勤怠管理model> list =
+		勤怠管理service.findall(Account);
+		//model.addAttribute("勤怠管理List",list);
 		return "ホーム";
 	}
 }
