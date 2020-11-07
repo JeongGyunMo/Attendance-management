@@ -3,6 +3,8 @@ package jp.ac.controller;
 import java.util.List;
 import java.util.Locale;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,9 +17,10 @@ import jp.ac.services.勤怠管理service;
  
 @Controller
 public class HomeController {
-
-	private 勤怠管理service 勤怠管理service; 
-	社員マスタRepository 社員マスタRepository;
+	
+	@Autowired
+	private 勤怠管理service 勤怠管理serviceImpl; 
+	//社員マスタRepository 社員マスタRepository;
 	
     @RequestMapping("/")
     public String home() {
@@ -31,7 +34,7 @@ public class HomeController {
 	@PostMapping("register")
 	public String register(Model model, 勤怠管理model Account) {
 		//List<勤怠管理model> list =
-		勤怠管理service.findall(Account);
+		勤怠管理serviceImpl.findall(Account);
 		//model.addAttribute("勤怠管理List",list);
 		return "ホーム";
 	}
