@@ -3,6 +3,7 @@ package jp.ac.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,6 +13,7 @@ import jp.ac.mappers.勤怠管理mapper;
 
 @Service
 public class 勤怠管理service {
+	
 	@Autowired
 	private 勤怠管理mapper 勤怠管理mapper;
 	
