@@ -1,10 +1,8 @@
 package jp.ac.mappers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.mybatis.spring.annotation.MapperScan;
-
+//import org.apache.ibatis.annotations.Mapper;
 import jp.ac.beans.勤怠管理model;
 import jp.ac.entities.社員マスタ;
 import jp.ac.entities.社員マスタRepository;
