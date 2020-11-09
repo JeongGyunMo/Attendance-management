@@ -3,20 +3,22 @@ package jp.ac.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import jp.ac.beans.勤怠管理model;
 import jp.ac.mappers.勤怠管理mapper;
+import lombok.RequiredArgsConstructor;
 
 @Service
+@RequiredArgsConstructor
 public class 勤怠管理service {
 	
 	@Autowired
-	private 勤怠管理mapper 勤怠管理mapper;
+	final private 勤怠管理mapper 勤怠管理mapper;
 	
+
 	@Transactional
 	public void findall(勤怠管理model Account){
 		勤怠管理mapper.findAII(Account);
