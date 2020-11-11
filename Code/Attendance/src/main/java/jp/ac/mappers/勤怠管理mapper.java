@@ -1,13 +1,13 @@
 package jp.ac.mappers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.mybatis.spring.annotation.MapperScan;
-//import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 import jp.ac.beans.勤怠管理model;
 import jp.ac.entities.社員マスタ;
 import jp.ac.entities.社員マスタRepository;
 
-@MapperScan
+@Mapper
 public class 勤怠管理mapper {
 	
 	@Autowired
