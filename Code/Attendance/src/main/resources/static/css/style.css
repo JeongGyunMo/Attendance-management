@@ -152,3 +152,6 @@ ul {list-style-type: none;}
     outline: none;
     border-radius: 30px;
 }
+--------------------------------------------
+	.wf-notosansjapanese { font-family: "Noto Sans JP"; }
+	:lang(ja) {font-family:osaka, sans-serif}

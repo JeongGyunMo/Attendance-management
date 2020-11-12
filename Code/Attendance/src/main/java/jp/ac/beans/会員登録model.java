@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 
 import lombok.Data;
 @Data
-public class 勤怠管理model {
+public class 会員登録model {
 	private int employeeid; //社員ID;
 	private String departcode; //部署コード;
 	private String employname; //社員名;

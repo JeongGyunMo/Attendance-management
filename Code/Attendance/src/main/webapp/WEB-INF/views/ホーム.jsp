@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
+<meta charset="UTF-8" />
 <title>Simile</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css"
-	href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
@@ -16,6 +18,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <style>
+
 </style>
 <body>
 
@@ -34,8 +37,10 @@
 				type="password" class="input-field" placeholder="Enter Password"
 				required>
 			<button class="submit">Login</button>
-			<a href="sign">ID検索</a>
-			<button class="btn">SIGN UP</button>
+			<a class="wf-notosansjapanese" href="sign">会員登録</a>
+			<p class="wf-notosansjapanese">日本に</p>
+			<p lang="ja">がんばれ</p>
+			<p>日本に</p>
 			<button class="btn">ID/PassWord検索</button>
 		</form>
 	</div>

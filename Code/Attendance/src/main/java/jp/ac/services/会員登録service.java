@@ -6,21 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import jp.ac.beans.勤怠管理model;
-import jp.ac.mappers.勤怠管理mapper;
+import jp.ac.beans.Test;
+import jp.ac.beans.会員登録model;
+import jp.ac.mappers.会員登録mapper;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class 勤怠管理service {
+public class 会員登録service {
 	@Autowired
-	final private 勤怠管理mapper 勤怠管理mapper;
-
-	public 勤怠管理service() { this.勤怠管理mapper = new 勤怠管理mapper(); }
-
-	@Transactional
-	public void findall(勤怠管理model Account){
-		勤怠管理mapper.findAII(Account);
+	会員登録mapper 会員登録mapper;
+	
+	public List<会員登録model> save(会員登録model Account) throws Exception{
+		return 会員登録mapper.save(Account);
 	}
 }

@@ -1,4 +1,4 @@
-package jp.ac.controller;
+package jp.ac;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
