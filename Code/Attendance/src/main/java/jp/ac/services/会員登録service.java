@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import jp.ac.beans.Test;
 import jp.ac.beans.会員登録model;
 import jp.ac.mappers.会員登録mapper;
 import lombok.RequiredArgsConstructor;

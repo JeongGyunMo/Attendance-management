@@ -31,10 +31,14 @@
 	</nav>
 
 	<div class="container text-center">
-		<form>
+		<form  action="/login" method="post">
 			<input type="text" class="input-field"
-				placeholder="User name or Email" required> <input
-				type="password" class="input-field" placeholder="Enter Password"
+				id="id" name="id"
+				placeholder="User name or Email" required>
+			 <input
+				type="password" class="input-field"
+				id="password" name="password"
+				placeholder="Enter Password"
 				required>
 			<button class="submit">Login</button>
 			<a class="wf-notosansjapanese" href="sign">会員登録</a>
