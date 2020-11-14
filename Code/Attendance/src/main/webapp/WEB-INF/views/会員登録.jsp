@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,64 +31,40 @@
 	<div class="container text-center">
 		<form action="register" method="post">
 			<label>社員ID</label>
-			<input type="text" class="input-field" id="employeeid" name="employeeid"
-				placeholder="User name or Email" required>
+			<input type="text" class="input-field" id="employeeid" name="employeeid">
 			<p>
 			<label>部署コード</label>
-			<input type="text" class="input-field" id="departcode" name="departcode"
-				placeholder="User name or Email" required>
+			<input type="text" class="input-field" id="departcode" name="departcode">
 			<p>
-			<label>名前</label>
-			<input type="text" class="input-field" id="employname" name="employname"
-				placeholder="User name or Email" required>
+			<label>社員名</label>
+			<input type="text" class="input-field" id="employname" name="employname">
 			<p>
 			<label>ログインID</label>
-			<input type="text" class="input-field" id="loginid" name="loginid"
-				placeholder="User name or Email" required>
+			<input type="text" class="input-field" id="loginid" name="loginid">
 			<p>
 			<label>ログインパスワード</label>
-			<input type="text" class="input-field" id="loginpass" name="loginpass"
-				placeholder="User name or Email" required>
+			<input type="text" class="input-field" id="loginpass" name="loginpass">
 			<p>
 			<label>フリガナ</label>
-			<input type="text" class="input-field" id="phonetic" name="phonetic"
-				placeholder="User name or Email" required>
+			<input type="text" class="input-field" id="phonetic" name="phonetic">
 			<p>
 			<label>郵便番号</label>
-			<input type="text" class="input-field" id="zipcode" name="zipcode"
-				placeholder="User name or Email" required>
+			<input type="text" class="input-field" id="zipcode" name="zipcode">
 			<p>
 			<label>住所1</label>
-			<input type="text" class="input-field" id="address1" name="address1"
-				placeholder="User name or Email" required>
+			<input type="text" class="input-field" id="address1" name="address1">
 			<p>
 			<label>住所2</label>
-			<input type="text" class="input-field" id="address2" name="address2"
-				placeholder="User name or Email" required>
+			<input type="text" class="input-field" id="address2" name="address2">
 			<p>
 			<label>電話番号</label>
-			<input type="text" class="input-field" id="phonenum" name="phonenum"
-				placeholder="User name or Email" required>
+			<input type="text" class="input-field" id="phonenum" name="phonenum">
 			<p>
 			<label>携帯番号</label>
-			<input type="text" class="input-field" id="mobilenum" name="mobilenum"
-				placeholder="User name or Email" required>
+			<input type="text" class="input-field" id="mobilenum" name="mobilenum">
 			<p>
 			<label>メール</label>
-			<input type="text" class="input-field" id="email" name="email"
-				placeholder="User name or Email" required>
-			<label>メール</label>
-			<input type="text" class="input-field" id="registred" name="registred"
-				placeholder="User name or Email" required>
-			<label>メール</label>
-			<input type="text" class="input-field" id="registredtime" name="registredtime"
-				placeholder="User name or Email" required>
-			<label>メール</label>
-			<input type="text" class="input-field" id="updated" name="updated"
-				placeholder="User name or Email" required>
-			<label>メール</label>
-			<input type="text" class="input-field" id="updatedtime" name="updatedtime"
-				placeholder="User name or Email" required>
+			<input type="text" class="input-field" id="email" name="email">
 			<p>
 			<button class="submit">Join</button>
 		</form>

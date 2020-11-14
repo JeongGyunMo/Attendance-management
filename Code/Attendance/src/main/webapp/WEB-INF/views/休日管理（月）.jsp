@@ -1,7 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>휴일관리(월)</title>
+  <title>休日管理(月)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -13,34 +14,34 @@
 <body>
 
 	<div class="jumbotron text-center mb-0" >
-		<h1>휴일관리(월)</h1>
+		<h1>休日管理(月)</h1>
 		<p>Resize this responsive page to see the effect!</p> 
 	</div>
 	<nav class="navbar navbar-expand-sm bg-danger navbar-dark mb-5">
 	  <ul class="navbar-nav">
 		<li class="nav-item active">
-		  <a class="nav-link" href="1.html">휴일관리(월)</a>
+		  <a class="nav-link" href="1.html">休日管理(月)</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="2.html">공통코드</a>
+		  <a class="nav-link" href="2.html">共通コード</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="3.html">직원관리</a>
+		  <a class="nav-link" href="3.html">職員管理</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="4.html">직원근무조회</a>
+		  <a class="nav-link" href="4.html">職員勤務照会</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="5.html">근무등록</a>
+		  <a class="nav-link" href="5.html">勤務登録</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="6.html">개인연가신청</a>
+		  <a class="nav-link" href="6.html">個人休暇申請</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="7.html">개인연가(대표)</a>
+		  <a class="nav-link" href="7.html">個人休暇(代表)</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="8.html">사원업무지시</a>
+		  <a class="nav-link" href="8.html">社員業務指示</a>
 		</li>
 	  </ul>
 	</nav>
@@ -67,16 +68,16 @@
 				</select>
 
 				<div class="input-group-append">
-					<button class="btn btn-primary" type="submit">검색</button>
+					<button class="btn btn-primary" type="submit">ê²ì</button>
 				</div>
 			</div>
 
 			<table class="table table-striped table-hover">
 			<thead class="thead-dark">
 			  <tr>
-				<th>일시</th>
-				<th>휴일</th>
-				<th>비고</th>
+				<th>日時</th>
+				<th>休日</th>
+				<th>備考</th>
 			  </tr>
 			</thead>
 			<tbody>
@@ -109,7 +110,7 @@
 			</table>
 
 			<div class="input-group mb-3">
-			<button type="button" class="btn btn-primary btn-block mt-5">저장</button>
+			<button type="button" class="btn btn-primary btn-block mt-5">ì ì¥</button>
 			</div>
 		</form>
 	</div>

@@ -5,6 +5,5 @@
 		SELECT employname
         FROM employee
         WHERE loginid IN (#{id}) AND loginpass IN (#{password})
-
     </select>
 </mapper>

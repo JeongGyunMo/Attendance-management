@@ -1,7 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>직원근무조회</title>
+  <title>ì§ìê·¼ë¬´ì¡°í</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -13,34 +14,34 @@
 <body>
 
 	<div class="jumbotron text-center mb-0" >
-		<h1>직원근무조회</h1>
+		<h1>ì§ìê·¼ë¬´ì¡°í</h1>
 		<p>Resize this responsive page to see the effect!</p> 
 	</div>
 	<nav class="navbar navbar-expand-sm bg-danger navbar-dark mb-5">
 	  <ul class="navbar-nav">
 		<li class="nav-item">
-		  <a class="nav-link" href="1.html">휴일관리(월)</a>
+		  <a class="nav-link" href="1.html">í´ì¼ê´ë¦¬(ì)</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="2.html">공통코드</a>
+		  <a class="nav-link" href="2.html">ê³µíµì½ë</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="3.html">직원관리</a>
+		  <a class="nav-link" href="3.html">ì§ìê´ë¦¬</a>
 		</li>
 		<li class="nav-item active">
-		  <a class="nav-link" href="4.html">직원근무조회</a>
+		  <a class="nav-link" href="4.html">ì§ìê·¼ë¬´ì¡°í</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="5.html">근무등록</a>
+		  <a class="nav-link" href="5.html">ê·¼ë¬´ë±ë¡</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="6.html">개인연가신청</a>
+		  <a class="nav-link" href="6.html">ê°ì¸ì°ê°ì ì²­</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="7.html">개인연가(대표)</a>
+		  <a class="nav-link" href="7.html">ê°ì¸ì°ê°(ëí)</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="8.html">사원업무지시</a>
+		  <a class="nav-link" href="8.html">ì¬ììë¬´ì§ì</a>
 		</li>
 	  </ul>
 	</nav>
@@ -54,11 +55,11 @@
 				</colgroup>
 				<tbody class="table-striped2">
 				  <tr>
-					<th>년월</th>
+					<th>ëì</th>
 					<td>&nbsp;</td>
 				  </tr>
 				  <tr>
-					<th>부서별</th>
+					<th>ë¶ìë³</th>
 					<td>&nbsp;</td>
 				  </tr>
 				</tbody>
@@ -67,18 +68,18 @@
 			  <table class="table table-striped table-hover">
 				<thead class="thead-dark">
 				  <tr>
-					<th>직원리스트</th>
+					<th>ì§ìë¦¬ì¤í¸</th>
 				  </tr>
 				</thead>
 				<tbody>
 				  <tr>
-					<td>정균모</td>
+					<td>ì ê· ëª¨</td>
 				  </tr>
 				  <tr>
-					<td>노주리</td>
+					<td>ë¸ì£¼ë¦¬</td>
 				  </tr>
 				  <tr>
-					<td>안은별</td>
+					<td>ììë³</td>
 				  </tr>
 				</tbody>
 			  </table>
@@ -88,12 +89,12 @@
 			  <table class="table table-striped table-hover">
 				<thead class="thead-dark">
 				  <tr>
-					<th>일시</th>
-					<th>출근시간</th>
-					<th>퇴근시간</th>
-					<th>업무내역</th>
-					<th>초과근무시</th>
-					<th>초과업무내역</th>
+					<th>ì¼ì</th>
+					<th>ì¶ê·¼ìê°</th>
+					<th>í´ê·¼ìê°</th>
+					<th>ìë¬´ë´ì­</th>
+					<th>ì´ê³¼ê·¼ë¬´ì</th>
+					<th>ì´ê³¼ìë¬´ë´ì­</th>
 				  </tr>
 				</thead>
 				<tbody>

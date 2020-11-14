@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
@@ -42,9 +43,6 @@
 				required>
 			<button class="submit">Login</button>
 			<a class="wf-notosansjapanese" href="sign">会員登録</a>
-			<p class="wf-notosansjapanese">日本に</p>
-			<p lang="ja">がんばれ</p>
-			<p>日本に</p>
 			<button class="btn">ID/PassWord検索</button>
 		</form>
 	</div>
