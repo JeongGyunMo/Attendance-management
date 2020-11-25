@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<title>共通コード</title>
+<title>個人休暇申請</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -18,7 +19,7 @@
 <body>
 
 	<div class="jumbotron text-center mb-0">
-		<h1>共通コード</h1>
+		<h1>個人休暇申請</h1>
 		<p>Resize this responsive page to see the effect!</p>
 	</div>
 	<nav class="navbar navbar-expand-sm bg-danger navbar-dark mb-5">
@@ -44,41 +45,63 @@
 
 	<div class="container text-center">
 		<form>
-			<div class="text-right mb-3">
-				<button type="button" class="btn btn-primary">追加</button>
-				<button type="button" class="btn btn-danger">削除</button>
-				<button type="button" class="btn btn-success">貯蔵</button>
+			<div class="row">
+				<div class="col-sm-4 text-left">
+					<select name="month" class="custom-select">
+						<option selected>year</option>
+						<option value="2002">2020</option>
+						<option value="2019">2019</option>
+						<option value="2018">2018</option>
+					</select>
+				</div>
+				<div class="col-sm-8 text-right mb-3">
+					<button type="button" class="btn btn-primary">追加</button>
+					<button type="button" class="btn btn-danger">削除</button>
+					<button type="button" class="btn btn-success">貯蔵</button>
+				</div>
 			</div>
 
 			<table class="table table-striped table-hover">
 				<thead class="thead-dark">
 					<tr>
-						<th>選択</th>
-						<th>小コード</th>
-						<th>小コード名</th>
-						<th>備考</th>
-						<th>&nbsp;</th>
+						<th>一連番号</th>
+						<th>名前</th>
+						<th>休日種類</th>
+						<th>開始日</th>
+						<th>終了日</th>
+						<th>理由</th>
+						<th>日数</th>
+						<th>承認区分</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td>&nbsp;</td>
-						<td>1001</td>
-						<td>社長</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
-					</tr>
-					<tr>
 						<td>&nbsp;</td>
-						<td>1002</td>
-						<td>部長</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
 					</tr>
 					<tr>
 						<td>&nbsp;</td>
-						<td>1003</td>
-						<td>課長</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
 					</tr>

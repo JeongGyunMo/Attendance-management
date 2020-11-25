@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>ê·¼ë¬´ë±ë¡</title>
+  <title>勤務登録</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css"/>
+  <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -14,34 +14,34 @@
 <body>
 
 	<div class="jumbotron text-center mb-0" >
-		<h1>ê·¼ë¬´ë±ë¡</h1>
+		<h1>勤務登録</h1>
 		<p>Resize this responsive page to see the effect!</p> 
 	</div>
 	<nav class="navbar navbar-expand-sm bg-danger navbar-dark mb-5">
 	  <ul class="navbar-nav">
 		<li class="nav-item">
-		  <a class="nav-link" href="1.html">í´ì¼ê´ë¦¬(ì)</a>
+		  <a class="nav-link" href="1.html">休日管理(月)</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="2.html">ê³µíµì½ë</a>
+		  <a class="nav-link" href="2.html">共通コード</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="3.html">ì§ìê´ë¦¬</a>
+		  <a class="nav-link" href="3.html">職員管理</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="4.html">ì§ìê·¼ë¬´ì¡°í</a>
+		  <a class="nav-link" href="4.html">職員勤務照会</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="5.html">勤務登録</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="6.html">個人休暇申請</a>
 		</li>
 		<li class="nav-item active">
-		  <a class="nav-link" href="5.html">ê·¼ë¬´ë±ë¡</a>
+		  <a class="nav-link" href="7.html">個人休暇(代表)</a>
 		</li>
 		<li class="nav-item">
-		  <a class="nav-link" href="6.html">ê°ì¸ì°ê°ì ì²­</a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" href="7.html">ê°ì¸ì°ê°(ëí)</a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link" href="8.html">ì¬ììë¬´ì§ì</a>
+		  <a class="nav-link" href="8.html">社員業務指示</a>
 		</li>
 	  </ul>
 	</nav>
@@ -107,9 +107,9 @@
 
 		<div class="col-md-7 col-sm-12">
 			<div class="text-right mb-3">
-			  <button type="button" class="btn btn-primary">ìë³ê·¼ë¬´ì¡°í</button>
-			  <button type="button" class="btn btn-success">ì¶ê·¼ì²´í¬ë²í¼</button>
-			  <button type="button" class="btn btn-danger">í´ê·¼ì²´í¬ë²í¼</button>
+			  <button type="button" class="btn btn-primary">月別勤務照会</button>
+			  <button type="button" class="btn btn-success">出勤</button>
+			  <button type="button" class="btn btn-danger">退勤</button>
 			</div>
 
 			<table class="table table-striped table-hover mb-5">
@@ -118,21 +118,21 @@
 			</colgroup>
 			<tbody class="table-striped2">
 			  <tr>
-				<th>ì¶ê·¼ìê°</th>
+				<th>出勤時間</th>
 				<td>&nbsp;</td>
 			  </tr>
 			  <tr>
-				<th>í´ê·¼ìê°</th>
+				<th>退勤時間</th>
 				<td>&nbsp;</td>
 			  </tr>
 			  <tr>
-				<th>ìë¬´ë´ì­</th>
+				<th>業務内容</th>
 				<td>&nbsp;</td>
 			  </tr>
 			</tbody>
 			</table>
 
-			<button type="button" class="btn btn-primary btn-block btn-lg mb-5">ì´ê³¼ê·¼ë¬´ì¶ê°</button>
+			<button type="button" class="btn btn-primary btn-block btn-lg mb-5">초과근무추가</button>
 
 			<table class="table table-striped table-hover mb-5">
 			<colgroup>
@@ -140,15 +140,15 @@
 			</colgroup>
 			<tbody class="table-striped2">
 			  <tr>
-				<th>ìììê°</th>
+				<th>開始時間</th>
 				<td>&nbsp;</td>
 			  </tr>
 			  <tr>
-				<th>ì¢ë£ìê°</th>
+				<th>終了時間</th>
 				<td>&nbsp;</td>
 			  </tr>
 			  <tr>
-				<th>ìë¬´ë´ì­</th>
+				<th>業務内容</th>
 				<td>&nbsp;</td>
 			  </tr>
 			</tbody>
@@ -166,3 +166,4 @@
 
 </body>
 </html>
+
