@@ -24,21 +24,19 @@
 	</div>
 	<nav class="navbar navbar-expand-sm bg-danger navbar-dark mb-5">
 		<ul class="navbar-nav">
-			<li class="nav-item"><a class="nav-link" href="1.html">休日管理(月)</a>
+			<li class="nav-item"><a class="nav-link" href="/休日管理(月)">休日管理(月)</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="2.html">共通コード</a>
+			<li class="nav-item"><a class="nav-link" href="/共通コード">共通コード</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="3.html">職員管理</a>
+			<li class="nav-item"><a class="nav-link" href="/職員管理">職員管理</a></li>
+			<li class="nav-item"><a class="nav-link" href="/職員勤務照">職員勤務照会</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="4.html">職員勤務照会</a>
+			<li class="nav-item"><a class="nav-link" href="/勤務">勤務登録</a></li>
+			<li class="nav-item"><a class="nav-link" href="/個人休暇申請">個人休暇申請</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="5.html">勤務登録</a>
+			<li class="nav-item active"><a class="nav-link" href="/個人休暇(代表)">個人休暇(代表)</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="6.html">個人休暇申請</a>
-			</li>
-			<li class="nav-item active"><a class="nav-link" href="7.html">個人休暇(代表)</a>
-			</li>
-			<li class="nav-item"><a class="nav-link" href="8.html">社員業務指示</a>
+			<li class="nav-item"><a class="nav-link" href="/社員業務指示">社員業務指示</a>
 			</li>
 		</ul>
 	</nav>

@@ -44,7 +44,7 @@ public class HomeController {
 		boolean result = ログインservice.logincheck(ID,session);
 		ModelAndView mav = new ModelAndView();
 		if(result == true) {
-			mav.setViewName("休日管理（月）");
+			mav.setViewName("勤務登録");
 			mav.addObject("msg", "success");
 		}else {
 			mav.setViewName("ホーム");
