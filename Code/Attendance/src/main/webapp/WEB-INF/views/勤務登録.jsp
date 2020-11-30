@@ -10,6 +10,28 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function attClock(){
+        var currentDate = new Date();
+        var attClock = document.getElementById("attClock");
+         
+        var msg = "현재 시간:"+currentDate.getHours()+"시"
+        msg += currentDate.getMinutes()+"분";
+        msg += currentDate.getSeconds()+"초";
+         
+        attClock.innerText = msg;
+    }
+    function leaClock(){
+        var currentDate = new Date();
+        var leaClock = document.getElementById("leaClock");
+         
+        var msg = "현재 시간:"+currentDate.getHours()+"시"
+        msg += currentDate.getMinutes()+"분";
+        msg += currentDate.getSeconds()+"초";
+         
+        leaClock.innerText = msg;
+    }
+</script>
 </head>
 <body>
 
@@ -108,8 +130,8 @@
 		<div class="col-md-7 col-sm-12">
 			<div class="text-right mb-3">
 			  <button type="button" class="btn btn-primary"onClick="location.href='/職員勤務照'">月別勤務照会</button>
-			  <button type="button" class="btn btn-success">出勤</button>
-			  <button type="button" class="btn btn-danger">退勤</button>
+			  <button type="button" class="btn btn-success"onClick="attClock()">出勤</button>
+			  <button type="button" class="btn btn-danger"onClick="leaClock()">退勤</button>
 			</div>
 
 			<table class="table table-striped table-hover mb-5">
@@ -119,11 +141,11 @@
 			<tbody class="table-striped2">
 			  <tr>
 				<th>出勤時間</th>
-				<td>&nbsp;</td>
+				<td><div id="attClock" class="clock"></div></td>
 			  </tr>
 			  <tr>
 				<th>退勤時間</th>
-				<td>&nbsp;</td>
+				<td><div id="leaClock" class="clock"></div></td>
 			  </tr>
 			  <tr>
 				<th>業務内容</th>
