@@ -18,7 +18,7 @@
 <script>
 	function attClock() {
 		var currentDate = new Date();
-		var attClock = document.getElementById("attClock");
+		var attClock = document.getElementById('attClock');
 
 		var msg = currentDate.getFullYear() + "-"
 		msg += (currentDate.getMonth() + 1) + "-";
@@ -26,7 +26,6 @@
 		msg += currentDate.getHours() + ":";
 		msg += currentDate.getMinutes() + ":";
 		msg += currentDate.getSeconds();
-
 		attClock.innerText = msg;
 	}
 	function leaClock() {
@@ -143,6 +142,8 @@
 							<th>出勤時間</th>
 							<td>
 								<div id="attClock" class="clock"></div>
+								<input type="date" id="attClock"/>
+    							<input type="text" id="attClock	">
 							</td>
 
 						</tr>
