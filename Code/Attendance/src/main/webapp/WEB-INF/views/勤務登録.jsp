@@ -142,8 +142,6 @@
 							<th>出勤時間</th>
 							<td>
 								<div id="attClock" class="clock"></div>
-								<input type="date" id="attClock"/>
-    							<input type="text" id="attClock	">
 							</td>
 
 						</tr>
