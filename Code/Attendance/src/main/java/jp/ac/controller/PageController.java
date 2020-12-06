@@ -15,6 +15,8 @@ import jp.ac.beans.ログインmodel;
 import jp.ac.beans.会員登録model;
 import jp.ac.services.会員登録service;
 import jp.ac.services.ログインservice;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
