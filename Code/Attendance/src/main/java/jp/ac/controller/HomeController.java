@@ -19,6 +19,7 @@ import jp.ac.services.時計service;
 import jp.ac.util.Accountinfo;
 import jp.ac.services.ログインservice;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -31,8 +32,7 @@ public class HomeController {
 	private 会員登録service 会員登録service; 
     @Autowired
     private ログインservice ログインservice;
-
-    private Accountinfo user;
+    private Accountinfo user = new Accountinfo();
     
     @RequestMapping(value = "/" , method = RequestMethod.GET) 
     public String home() {
@@ -50,27 +50,38 @@ public class HomeController {
 	}
 	@PostMapping("/login")
 	public ModelAndView login(ログインmodel ID, HttpSession session) throws Exception {
-		boolean result = ログインservice.logincheck(ID,session);
+		String Eid = ログインservice.logincheck(ID,session);
 		ModelAndView mav = new ModelAndView();
-		if(result == true) {
+		if(Eid != null) {
 			mav.setViewName("勤務登録");
 			mav.addObject("msg", "success");
 		}else {
 			mav.setViewName("ホーム");
 			mav.addObject("msg", "failure");
 		}
-		//user.setId(ID.getId());
+		user.setId(Eid);
 		return mav;
 	}
 	@ResponseBody
-	@RequestMapping(value = "Clock.do", method = RequestMethod.POST)
-	public void memberRegi(Timestamp Clock, HttpServletRequest request) {
+	@RequestMapping(value = "Clock.att", method = RequestMethod.POST)
+	public void Clockatt(Timestamp Clock, HttpServletRequest request) {
+		int ID = Integer.parseInt(user.getId());
 		try {
-			時計service.Clocksave(Clock);
+			時計service.Clocksaveatt(Clock, ID);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(request.getParameter("Clock"));
+	}
+	@ResponseBody
+	@RequestMapping(value = "Clock.lea", method = RequestMethod.POST)
+	public void Clocklea(Timestamp Clock, HttpServletRequest request) {
+		int ID = Integer.parseInt(user.getId());
+		try {
+			時計service.Clocksavelea(Clock, ID);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 } 

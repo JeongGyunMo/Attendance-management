@@ -18,7 +18,10 @@ public class 時計service {
 	@Autowired
 	時計mapper 時計mapper;
 	
-	public String Clocksave(Timestamp Clock) throws Exception{
-		return 時計mapper.Clocksave(Clock);
+	public String Clocksaveatt(Timestamp Clock, int ID) throws Exception{
+		return 時計mapper.Clocksaveatt(Clock, ID);
+	}
+	public String Clocksavelea(Timestamp Clock, int ID) throws Exception{
+		return 時計mapper.Clocksavelea(Clock, ID);
 	}
 }

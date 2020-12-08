@@ -29,7 +29,7 @@
 		attClock.innerText = msg;
 		
 		$.ajax({
-			url: "Clock.do",
+			url: "Clock.att",
 			data: "Clock=" + attClock.textContent,
 			type: "POST",
 			success : function(data){
@@ -54,7 +54,7 @@
 		leaClock.innerText = msg;
 		
 		$.ajax({
-			url: "Clock.do",
+			url: "Clock.lea",
 			data: "Clock=" + leaClock.textContent,
 			type: "POST",
 			success : function(data){
@@ -64,10 +64,6 @@
 				alert("에러")		
 			}
 		});
-	}
-	function ajax(){
-		var Clock = attClock();
-
 	}
 </script>
 <script>

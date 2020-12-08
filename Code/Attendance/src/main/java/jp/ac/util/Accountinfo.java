@@ -7,12 +7,9 @@ public class Accountinfo {
     private String id;
     private int grade;
 
-    public Accountinfo(String id, int grade) {
-        this.id = id;
-        this.grade = grade;
-    }
-    public Accountinfo(String id) {
-        this.id = id;
+    public Accountinfo() {
+        this.id = "123";
+        this.grade = 1;
     }
     
 }

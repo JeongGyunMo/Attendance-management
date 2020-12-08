@@ -4,5 +4,6 @@ import java.sql.Timestamp;
 
 public interface 時計mapper {
 
-	public String Clocksave(Timestamp Clock) throws Exception;
+	public String Clocksaveatt(Timestamp Clock, int ID) throws Exception;
+	public String Clocksavelea(Timestamp Clock, int ID) throws Exception;
 }

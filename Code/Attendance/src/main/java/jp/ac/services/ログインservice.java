@@ -15,18 +15,15 @@ public class ログインservice {
 	@Autowired
 	ログインmapper ログインmapper;
 
-	public boolean logincheck(ログインmodel ID, HttpSession session) throws Exception {
-		boolean result = true;
-		String name = ログインmapper.logincheck(ID);
-		if(name == null) {
-			result = false;
-		}
+	public String logincheck(ログインmodel ID, HttpSession session) throws Exception {
+		String Eid = ログインmapper.logincheck(ID);
+
 		/*
 		 * if (result) { ログインmodel user = viewMember(ID); session.setAttribute("userid",
 		 * user.getId()); }
 		 */
 
-		return result;
+		return Eid;
 	}
 
 }
