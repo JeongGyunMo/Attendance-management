@@ -11,5 +11,4 @@ public class Accountinfo {
         this.id = "123";
         this.grade = 1;
     }
-    
 }
