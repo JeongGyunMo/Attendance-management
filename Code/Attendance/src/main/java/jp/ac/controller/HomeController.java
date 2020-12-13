@@ -12,12 +12,12 @@ import java.util.Locale;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import jp.ac.beans.ログインmodel;
-import jp.ac.beans.会員登録model;
-import jp.ac.services.会員登録service;
-import jp.ac.services.時計service;
+import jp.ac.beans.LoginModel;
+import jp.ac.beans.MemberModel;
+import jp.ac.services.MemberService;
+import jp.ac.services.TimeService;
 import jp.ac.util.Accountinfo;
-import jp.ac.services.ログインservice;
+import jp.ac.services.LoginService;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -27,11 +27,11 @@ import javax.servlet.http.HttpSession;
 public class HomeController {
 
 	@Autowired
-	private 時計service 時計service; 
+	private TimeService 時計service; 
 	@Autowired
-	private 会員登録service 会員登録service; 
+	private MemberService 会員登録service; 
     @Autowired
-    private ログインservice ログインservice;
+    private LoginService ログインservice;
     private Accountinfo user = new Accountinfo();
     
     @RequestMapping(value = "/" , method = RequestMethod.GET) 
@@ -44,12 +44,12 @@ public class HomeController {
 	}
 
 	@PostMapping("register")
-	public String  register(会員登録model Account) throws Exception {
+	public String  register(MemberModel Account) throws Exception {
 		会員登録service.save(Account);
 		return "ホーム";
 	}
 	@PostMapping("/login")
-	public ModelAndView login(ログインmodel ID, HttpSession session) throws Exception {
+	public ModelAndView login(LoginModel ID, HttpSession session) throws Exception {
 		String Eid = ログインservice.logincheck(ID,session);
 		ModelAndView mav = new ModelAndView();
 		if(Eid != null) {

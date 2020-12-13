@@ -7,16 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 
-import jp.ac.beans.会員登録model;
-import jp.ac.mappers.会員登録mapper;
-import jp.ac.mappers.時計mapper;
+import jp.ac.beans.MemberModel;
+import jp.ac.mappers.MemberMapper;
+import jp.ac.mappers.TimeMapper;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class 時計service {
+public class TimeService {
 	@Autowired
-	時計mapper 時計mapper;
+	TimeMapper 時計mapper;
 	
 	public String Clocksaveatt(Timestamp Clock, int ID) throws Exception{
 		return 時計mapper.Clocksaveatt(Clock, ID);

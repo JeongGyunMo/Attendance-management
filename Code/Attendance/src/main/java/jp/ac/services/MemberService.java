@@ -6,17 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import jp.ac.beans.会員登録model;
-import jp.ac.mappers.会員登録mapper;
+import jp.ac.beans.MemberModel;
+import jp.ac.mappers.MemberMapper;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class 会員登録service {
+public class MemberService {
 	@Autowired
-	会員登録mapper 会員登録mapper;
+	MemberMapper 会員登録mapper;
 	
-	public List<会員登録model> save(会員登録model Account) throws Exception{
+	public List<MemberModel> save(MemberModel Account) throws Exception{
 		return 会員登録mapper.save(Account);
 	}
 }

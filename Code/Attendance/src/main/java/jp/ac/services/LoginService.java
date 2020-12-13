@@ -5,17 +5,17 @@ import javax.servlet.http.HttpSession;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import jp.ac.mappers.ログインmapper;
+import jp.ac.mappers.LoginMapper;
 import lombok.RequiredArgsConstructor;
-import jp.ac.beans.ログインmodel;
+import jp.ac.beans.LoginModel;
 
 @Service
 @RequiredArgsConstructor
-public class ログインservice {
+public class LoginService {
 	@Autowired
-	ログインmapper ログインmapper;
+	LoginMapper ログインmapper;
 
-	public String logincheck(ログインmodel ID, HttpSession session) throws Exception {
+	public String logincheck(LoginModel ID, HttpSession session) throws Exception {
 		String Eid = ログインmapper.logincheck(ID);
 
 		/*

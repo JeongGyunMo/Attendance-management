@@ -11,10 +11,10 @@ import java.util.Locale;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import jp.ac.beans.ログインmodel;
-import jp.ac.beans.会員登録model;
-import jp.ac.services.会員登録service;
-import jp.ac.services.ログインservice;
+import jp.ac.beans.LoginModel;
+import jp.ac.beans.MemberModel;
+import jp.ac.services.MemberService;
+import jp.ac.services.LoginService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

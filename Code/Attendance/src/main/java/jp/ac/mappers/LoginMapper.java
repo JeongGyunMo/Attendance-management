@@ -6,11 +6,11 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import jp.ac.beans.ログインmodel;
-import jp.ac.beans.会員登録model;
+import jp.ac.beans.LoginModel;
+import jp.ac.beans.MemberModel;
 
-public interface ログインmapper{
+public interface LoginMapper{
 
-	public String logincheck(ログインmodel ID) throws Exception;
+	public String logincheck(LoginModel ID) throws Exception;
 	
 }
