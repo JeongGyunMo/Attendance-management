@@ -11,6 +11,6 @@ import jp.ac.beans.MemberModel;
 
 public interface LoginMapper{
 
-	public String logincheck(LoginModel ID) throws Exception;
+	public String logincheck(LoginModel id) throws Exception;
 	
 }

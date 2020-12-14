@@ -27,11 +27,11 @@ import javax.servlet.http.HttpSession;
 public class HomeController {
 
 	@Autowired
-	private TimeService 時計service; 
+	private TimeService TimeService; 
 	@Autowired
-	private MemberService 会員登録service; 
+	private MemberService MemberService; 
     @Autowired
-    private LoginService ログインservice;
+    private LoginService LoginService;
     private Accountinfo user = new Accountinfo();
     
     @RequestMapping(value = "/" , method = RequestMethod.GET) 
@@ -45,43 +45,34 @@ public class HomeController {
 
 	@PostMapping("register")
 	public String  register(MemberModel Account) throws Exception {
-		会員登録service.save(Account);
+		MemberService.save(Account);
 		return "ホーム";
 	}
 	@PostMapping("/login")
-	public ModelAndView login(LoginModel ID, HttpSession session) throws Exception {
-		String Eid = ログインservice.logincheck(ID,session);
+	public ModelAndView login(LoginModel id, HttpSession session) throws Exception {
+		String employeeId = LoginService.logincheck(id,session);
 		ModelAndView mav = new ModelAndView();
-		if(Eid != null) {
+		if(employeeId != null) {
 			mav.setViewName("勤務登録");
 			mav.addObject("msg", "success");
 		}else {
 			mav.setViewName("ホーム");
 			mav.addObject("msg", "failure");
 		}
-		user.setId(Eid);
+		user.setId(employeeId);
 		return mav;
 	}
 	@ResponseBody
-	@RequestMapping(value = "Clock.att", method = RequestMethod.POST)
-	public void Clockatt(Timestamp Clock, HttpServletRequest request) {
-		int ID = Integer.parseInt(user.getId());
-		try {
-			時計service.Clocksaveatt(Clock, ID);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	@RequestMapping(value = "clock.att", method = RequestMethod.POST)
+	public void Clockatt(Timestamp clock, HttpServletRequest request) throws Exception {
+		int id = Integer.parseInt(user.getId());
+			TimeService.Clocksaveatt(clock, id);
+
 	}
 	@ResponseBody
-	@RequestMapping(value = "Clock.lea", method = RequestMethod.POST)
-	public void Clocklea(Timestamp Clock, HttpServletRequest request) {
-		int ID = Integer.parseInt(user.getId());
-		try {
-			時計service.Clocksavelea(Clock, ID);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	@RequestMapping(value = "clock.lea", method = RequestMethod.POST)
+	public void Clocklea(Timestamp clock, HttpServletRequest request) throws Exception {
+		int id = Integer.parseInt(user.getId());
+			TimeService.Clocksavelea(clock, id);
 	}
 } 

@@ -5,6 +5,6 @@ import jp.ac.beans.MemberModel;
 
 public interface MemberMapper {
 
-	public List<MemberModel> save(MemberModel Account) throws Exception;
+	public List<MemberModel> save(MemberModel account) throws Exception;
 	
 }

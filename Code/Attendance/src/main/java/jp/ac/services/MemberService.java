@@ -14,9 +14,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class MemberService {
 	@Autowired
-	MemberMapper 会員登録mapper;
+	MemberMapper MemberMapper;
 	
-	public List<MemberModel> save(MemberModel Account) throws Exception{
-		return 会員登録mapper.save(Account);
+	public List<MemberModel> save(MemberModel account) throws Exception{
+		return MemberMapper.save(account);
 	}
 }

@@ -16,12 +16,12 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class TimeService {
 	@Autowired
-	TimeMapper 時計mapper;
+	TimeMapper TimeMapper;
 	
-	public String Clocksaveatt(Timestamp Clock, int ID) throws Exception{
-		return 時計mapper.Clocksaveatt(Clock, ID);
+	public String Clocksaveatt(Timestamp clock, int id) throws Exception{
+		return TimeMapper.clockSaveAtt(clock, id);
 	}
-	public String Clocksavelea(Timestamp Clock, int ID) throws Exception{
-		return 時計mapper.Clocksavelea(Clock, ID);
+	public String Clocksavelea(Timestamp clock, int id) throws Exception{
+		return TimeMapper.clockSaveLea(clock, id);
 	}
 }

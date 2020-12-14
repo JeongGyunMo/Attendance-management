@@ -13,17 +13,11 @@ import jp.ac.beans.LoginModel;
 @RequiredArgsConstructor
 public class LoginService {
 	@Autowired
-	LoginMapper ログインmapper;
+	LoginMapper LoginMapper;
 
-	public String logincheck(LoginModel ID, HttpSession session) throws Exception {
-		String Eid = ログインmapper.logincheck(ID);
-
-		/*
-		 * if (result) { ログインmodel user = viewMember(ID); session.setAttribute("userid",
-		 * user.getId()); }
-		 */
-
-		return Eid;
+	public String logincheck(LoginModel id, HttpSession session) throws Exception {
+		String employeeId = LoginMapper.logincheck(id);
+		return employeeId;
 	}
 
 }
