@@ -27,52 +27,58 @@ import javax.servlet.http.HttpSession;
 public class HomeController {
 
 	@Autowired
-	private TimeService TimeService; 
+	private TimeService TimeService;
 	@Autowired
-	private MemberService MemberService; 
-    @Autowired
-    private LoginService LoginService;
-    private Accountinfo user = new Accountinfo();
-    
-    @RequestMapping(value = "/" , method = RequestMethod.GET) 
-    public String home() {
-        return "ホーム";
-    }
+	private MemberService MemberService;
+	@Autowired
+	private LoginService LoginService;
+	// Service依存性注入
+	private Accountinfo user = new Accountinfo();
+	// user情報を保存
+
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String home() {
+		return "ホーム";
+	}
+
 	@RequestMapping(value = "sign", method = RequestMethod.GET)
 	public String sing(Locale locale, Model model) {
 		return "会員登録";
 	}
 
 	@PostMapping("register")
-	public String  register(MemberModel Account) throws Exception {
+	public String register(MemberModel Account) throws Exception {
 		MemberService.save(Account);
 		return "ホーム";
 	}
+
 	@PostMapping("/login")
 	public ModelAndView login(LoginModel id, HttpSession session) throws Exception {
-		String employeeId = LoginService.logincheck(id,session);
+		String employeeId = LoginService.logincheck(id, session);
 		ModelAndView mav = new ModelAndView();
-		if(employeeId != null) {
+		if (employeeId != null) {
 			mav.setViewName("勤務登録");
 			mav.addObject("msg", "success");
-		}else {
+		} else {
 			mav.setViewName("ホーム");
 			mav.addObject("msg", "failure");
 		}
 		user.setId(employeeId);
 		return mav;
 	}
+
 	@ResponseBody
 	@RequestMapping(value = "clock.att", method = RequestMethod.POST)
 	public void Clockatt(Timestamp clock, HttpServletRequest request) throws Exception {
 		int id = Integer.parseInt(user.getId());
-			TimeService.Clocksaveatt(clock, id);
+		TimeService.Clocksaveatt(clock, id);
 
 	}
+
 	@ResponseBody
 	@RequestMapping(value = "clock.lea", method = RequestMethod.POST)
 	public void Clocklea(Timestamp clock, HttpServletRequest request) throws Exception {
 		int id = Integer.parseInt(user.getId());
-			TimeService.Clocksavelea(clock, id);
+		TimeService.Clocksavelea(clock, id);
 	}
-} 
+}
