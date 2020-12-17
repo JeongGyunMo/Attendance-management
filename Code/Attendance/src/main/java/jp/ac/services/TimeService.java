@@ -17,11 +17,14 @@ import lombok.RequiredArgsConstructor;
 public class TimeService {
 	@Autowired
 	TimeMapper TimeMapper;
-	
-	public String Clocksaveatt(Timestamp clock, int id) throws Exception{
+
+	public String Clocksaveatt(Timestamp clock, int id) throws Exception {
 		return TimeMapper.clockSaveAtt(clock, id);
 	}
-	public String Clocksavelea(Timestamp clock, int id) throws Exception{
+	// 出勤時間記録
+
+	public String Clocksavelea(Timestamp clock, int id) throws Exception {
 		return TimeMapper.clockSaveLea(clock, id);
 	}
+	// 退勤時間記録
 }

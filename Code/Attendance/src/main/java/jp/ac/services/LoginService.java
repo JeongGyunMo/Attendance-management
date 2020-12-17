@@ -19,5 +19,6 @@ public class LoginService {
 		String employeeId = LoginMapper.logincheck(id);
 		return employeeId;
 	}
+	//DBにデータを読み込んでcontrollerに送る。
 
 }
