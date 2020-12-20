@@ -38,7 +38,7 @@
 				placeholder="User name or Email" required>
 			 <input
 				type="password" class="input-field"
-				id="password" name="password"
+				id="passWord" name="passWord"
 				placeholder="Enter Password"
 				required>
 			<button class="submit">Login</button>
