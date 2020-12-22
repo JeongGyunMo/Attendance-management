@@ -161,11 +161,16 @@ function kCalendar(id, date) {
 }
 </script>
 </head>
+
 <body>
+	<!--▼▼▼ヘッダ▼▼▼-->
 	<div class="jumbotron text-center mb-0">
 		<h1>勤務登録</h1>
 		<p>Resize this responsive page to see the effect!</p>
 	</div>
+	<!--▲▲▲ヘッダ▲▲▲-->
+
+	<!--▼▼▼ボディ▼▼▼-->
 	<nav class="navbar navbar-expand-sm bg-danger navbar-dark mb-5">
 		<ul class="navbar-nav">
 			<li class="nav-item"><a class="nav-link" href="/休日管理(月)">休日管理(月)</a>
@@ -184,10 +189,10 @@ function kCalendar(id, date) {
 			</li>
 		</ul>
 	</nav>
-
+	<!--▼▼▼ボタンはこの行に記述してください。▼▼▼-->
 	<div class="container text-center">
 		<div class="row">
-			<span id="kCalendar" class="cnj_input" style="width:35%"></span>
+			<span id="kCalendar" class="cnj_input" style="width: 35%"></span>
 			<div class="col-md-7 col-sm-12">
 				<div class="text-right mb-3">
 					<button type="button" class="btn btn-primary"
@@ -195,7 +200,6 @@ function kCalendar(id, date) {
 					<button type="button" class="btn btn-success" onClick="attClock()">出勤</button>
 					<button type="button" class="btn btn-danger" onClick="leaClock()">退勤</button>
 				</div>
-
 				<table class="table table-striped table-hover mb-5">
 					<colgroup>
 						<col width="40%">
@@ -206,7 +210,6 @@ function kCalendar(id, date) {
 							<td>
 								<div id="attClock" class="clock"></div>
 							</td>
-
 						</tr>
 						<tr>
 							<th>退勤時間</th>
@@ -243,10 +246,10 @@ function kCalendar(id, date) {
 			</div>
 		</div>
 	</div>
+	<!--▲▲▲ボディ▲▲▲-->
 	<div class="jumbotron text-center mb-0 mt-5">
 		<p>Footer</p>
 	</div>
-
 </body>
 </html>
 
