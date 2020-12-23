@@ -68,7 +68,7 @@ public class HomeController {
 	}
 
 	@ResponseBody
-	@RequestMapping(value = "clock.att", method = RequestMethod.POST)
+	@RequestMapping(value = "time.att", method = RequestMethod.POST)
 	public void Clockatt(Timestamp clock, HttpServletRequest request) throws Exception {
 		int id = Integer.parseInt(user.getId());
 		TimeService.Clocksaveatt(clock, id);
@@ -76,7 +76,7 @@ public class HomeController {
 	}
 
 	@ResponseBody
-	@RequestMapping(value = "clock.lea", method = RequestMethod.POST)
+	@RequestMapping(value = "time.lea", method = RequestMethod.POST)
 	public void Clocklea(Timestamp clock, HttpServletRequest request) throws Exception {
 		int id = Integer.parseInt(user.getId());
 		TimeService.Clocksavelea(clock, id);
