@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +18,6 @@
 
 	<div class="jumbotron text-center mb-0" >
 		<h1>職員勤務照会</h1>
-		<p>Resize this responsive page to see the effect!</p> 
 	</div>
 	<nav class="navbar navbar-expand-sm bg-danger navbar-dark mb-5">
 		<ul class="navbar-nav">
@@ -24,11 +26,10 @@
 			<li class="nav-item"><a class="nav-link" href="/共通コード">共通コード</a>
 			</li>
 			<li class="nav-item"><a class="nav-link" href="/職員管理">職員管理</a></li>
-			<li class="nav-item"><a class="nav-link" href="/職員勤務照">職員勤務照会</a>
+			<li class="nav-item"><a class="nav-link" href="attSelect">職員勤務照会</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="/勤務">勤務登録</a></li>
-			<li class="nav-item"><a class="nav-link" href="/個人休暇申請">個人休暇申請</a>
-			</li>
+			<li class="nav-item"><a class="nav-link" href="attInsertView">勤務登録</a></li>
+			<li class="nav-item"><a class="nav-link" href="/holidayApply">個人休暇申請</a></li>
 			<li class="nav-item active"><a class="nav-link" href="/個人休暇(代表)">個人休暇(代表)</a>
 			</li>
 			<li class="nav-item"><a class="nav-link" href="/社員業務指示">社員業務指示</a>
@@ -45,31 +46,12 @@
 				</colgroup>
 				<tbody class="table-striped2">
 				  <tr>
-					<th>年月</th>
+					<th>年</th>
 					<td>&nbsp;</td>
 				  </tr>
 				  <tr>
-					<th>部署別</th>
+					<th>月</th>
 					<td>&nbsp;</td>
-				  </tr>
-				</tbody>
-			  </table>
-
-			  <table class="table table-striped table-hover">
-				<thead class="thead-dark">
-				  <tr>
-					<th>職員リスト</th>
-				  </tr>
-				</thead>
-				<tbody>
-				  <tr>
-					<td>정균모</td>
-				  </tr>
-				  <tr>
-					<td>노주리</td>
-				  </tr>
-				  <tr>
-					<td>안은별</td>
 				  </tr>
 				</tbody>
 			  </table>
@@ -88,63 +70,25 @@
 				  </tr>
 				</thead>
 				<tbody>
-				  <tr>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				  </tr>
-				  <tr>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				  </tr>
-				  <tr>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				  </tr>
-				  <tr>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				  </tr>
-				  <tr>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				  </tr>
-				  <tr>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				  </tr>
-				  <tr>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				  </tr>
-				</tbody>
+					<!-- モデルから貯蔵されたリストを取ってくる -->
+						<c:forEach var="list" items="${list}">
+							<tr>
+							<td>
+							<c:choose>
+								<c:when test="${list.date1 eq null}">no data</c:when>
+								<c:otherwise>${list.date1}</c:otherwise>
+							</c:choose>
+							</td>
+								<!-- ヌール確認 -->
+								<!-- timestampは時間の形を更新するとき、formatDateっを使う。HH:mmは時、分だけを表現する -->
+								<td><fmt:formatDate pattern="HH:mm" value="${list.attendTime}"/></td>
+								<td><fmt:formatDate pattern="HH:mm" value="${list.leaveTime}"/></td>
+								<td>${list.workContents}</td>
+								<td>${list.overWorkTime}</td>
+								<td>${list.overWorkContents}</td>
+							</tr>
+						</c:forEach>
+					</tbody>
 				</table>
 			</div>
 		</div>

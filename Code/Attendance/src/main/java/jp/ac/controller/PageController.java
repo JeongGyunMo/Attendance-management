@@ -37,14 +37,14 @@ public class PageController {
         return "職員管理";
     }
     
-    @RequestMapping(value = "/職員勤務照" , method = RequestMethod.GET) 
-    public String 職員勤務照会() throws Exception {
-        return "職員勤務照会";
-    }
+//    @RequestMapping(value = "/職員勤務照" , method = RequestMethod.GET) 
+//    public String 職員勤務照会() throws Exception {
+//        return "職員勤務照会";
+//    }
     
-    @RequestMapping(value = "/勤務" , method = RequestMethod.GET) 
+    @RequestMapping(value = "/attInsertView" , method = RequestMethod.GET) 
     public String 勤務() throws Exception {
-        return "勤務登録";
+        return "attInsertView";
     }
     
     @RequestMapping(value = "/個人休暇申請" , method = RequestMethod.GET) 

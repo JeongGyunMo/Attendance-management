@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="jp.ac.mappers.TimeMapper">
 	<select id="clockSaveAtt" resultType="String">
-		INSERT INTO times(employeeid , attendtime)
-		VALUES(#{id},#{clock})
+		INSERT INTO times(employeeid , dates , attendtime)
+		VALUES(#{id},#{clock},#{clock})
 	</select>
 	<select id="clockSaveLea" resultType="String">
-		INSERT INTO times(employeeid , leavetime)
-		VALUES(#{id},#{clock})
+		INSERT INTO times(employeeid , dates ,leavetime)
+		VALUES(#{id},#{clock},#{clock})
 	</select>
 </mapper>

@@ -30,13 +30,13 @@
 	<div class="container text-center">
 		<form action="register" method="post">
 			<label>社員ID</label>
-			<input type="text" class="input-field" id="employeeid" name="employeeid">
+			<input type="text" class="input-field" id="employeeId" name="employeeId">
 			<p>
 			<label>部署コード</label>
 			<input type="text" class="input-field" id="departcode" name="departcode">
 			<p>
 			<label>社員名</label>
-			<input type="text" class="input-field" id="employname" name="employname">
+			<input type="text" class="input-field" id="employName" name="employName">
 			<p>
 			<label>ログインID</label>
 			<input type="text" class="input-field" id="loginid" name="loginid">

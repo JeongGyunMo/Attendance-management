@@ -19,6 +19,7 @@ public class TimeService {
 	TimeMapper TimeMapper;
 
 	public String Clocksaveatt(Timestamp clock, int id) throws Exception {
+		System.out.print("clock"+clock);
 		return TimeMapper.clockSaveAtt(clock, id);
 	}
 	// 出勤時間記録

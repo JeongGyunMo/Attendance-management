@@ -1,7 +1,8 @@
 function attTime() {
 		var currentDate = new Date();
-		var attClock = document.getElementById('attClock');
-
+		var attClock= document.getElementById("attClock");
+		var Clock;
+		
 		var msg = currentDate.getFullYear() + "-"
 		msg += (currentDate.getMonth() + 1) + "-";
 		msg += currentDate.getDate() + " ";
@@ -9,10 +10,9 @@ function attTime() {
 		msg += currentDate.getMinutes() + ":";
 		msg += currentDate.getSeconds();
 		attClock.innerText = msg;
-		
 		$.ajax({
 			url: "time.att",
-			data: "Clock=" + attClock.textContent,
+			data: "clock=" + attClock.textContent,
 			type: "POST",
 			success : function(data){
 				alert("성공")
@@ -21,7 +21,11 @@ function attTime() {
 				alert("에러")		
 			}
 		});
-	}
+		msg = currentDate.getHours() + ":"
+		msg += currentDate.getMinutes() + ":";
+		msg += currentDate.getSeconds();
+		attClock.innerText = msg;
+}
 	function leaTime() {
 		var currentDate = new Date();
 		var leaClock = document.getElementById("leaClock");
@@ -32,7 +36,6 @@ function attTime() {
 		msg += currentDate.getHours() + ":";
 		msg += currentDate.getMinutes() + ":";
 		msg += currentDate.getSeconds();
-
 		leaClock.innerText = msg;
 		
 		$.ajax({
@@ -46,4 +49,8 @@ function attTime() {
 				alert("에러")		
 			}
 		});
+		msg = currentDate.getHours() + ":"
+		msg += currentDate.getMinutes() + ":";
+		msg += currentDate.getSeconds();
+		leaClock.innerText = msg;
 	}

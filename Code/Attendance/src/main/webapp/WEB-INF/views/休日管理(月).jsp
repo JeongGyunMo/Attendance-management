@@ -24,11 +24,10 @@
 			<li class="nav-item"><a class="nav-link" href="/共通コード">共通コード</a>
 			</li>
 			<li class="nav-item"><a class="nav-link" href="/職員管理">職員管理</a></li>
-			<li class="nav-item"><a class="nav-link" href="/職員勤務照">職員勤務照会</a>
+			<li class="nav-item"><a class="nav-link" href="attSelect">職員勤務照会</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="/勤務">勤務登録</a></li>
-			<li class="nav-item"><a class="nav-link" href="/個人休暇申請">個人休暇申請</a>
-			</li>
+			<li class="nav-item"><a class="nav-link" href="attInsertView">勤務登録</a></li>
+			<li class="nav-item"><a class="nav-link" href="/holidayApply">個人休暇申請</a></li>
 			<li class="nav-item active"><a class="nav-link" href="/個人休暇(代表)">個人休暇(代表)</a>
 			</li>
 			<li class="nav-item"><a class="nav-link" href="/社員業務指示">社員業務指示</a>
