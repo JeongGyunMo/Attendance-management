@@ -58,24 +58,34 @@
 	<select id="holidayList"
 		resultType="jp.ac.beans.HolidayApplyModel">
 		SELECT
-		    * 
+		    emp.*, com.code, com.codename 
 		FROM
-		    empyearfreetime 
+		    empyearfreetime emp, commons com 
 		WHERE
-		    employeeid = #{employeeId}
+			emp.employeeid = #{employeeId} and 
+		    emp.yeartimecode = com.code
+			<if test='year != null and month == "all"'>
+				and to_char(emp.fromdate,'yyyy') = #{year}
+			</if>
+			<if test='year != null and month != "all"'>
+				and to_char(emp.fromdate,'yyyy') = #{year} and to_char(emp.fromdate,'MM') = #{month}
+			</if>
+			
+		ORDER BY
+    		emp.seriesnum desc 
 	</select>
 
 	<!--　申請リスト　-->
-	<select id="holidaySelect"
+	<select id="holidayType"
 		resultType="jp.ac.beans.HolidayApplyModel">
 		SELECT
-		    * 
+		    code, codename 
 		FROM
-		    empyearfreetime 
+			commons 
 		WHERE
-		    to_char(fromdate,'yyyy') = #{year}
+    		TEXT(code) LIKE '100%'
 	</select>
-	
+		
 	<!-- リスト削除 -->
 	<delete id="holidayDelete">
 		DELETE 

@@ -13,23 +13,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 <!-- HolidayApply.js -->
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/static/js/HolidayApply.js"></script>
-<script>
-function selectForm(){
-	if(holidayForm.year.value == ""){
-		alert("年度を選択してください。");
-		holidayForm.year.focus();
-		return;
-	}
-	holidayForm.action = "holidaySelect";
-	holidayForm.submit();
-}
-</script>
 </head>
 <body>
 	<div class="jumbotron text-center mb-0">
@@ -51,19 +39,27 @@ function selectForm(){
 	<div class="container text-center">
 		<form name="holidayForm" id="holidayForm" method="post" action="holidayInsert">
 			<div class="row">
-				<div class="col-sm-3 text-left">
+				<div class="col-sm-2 text-left">
 					<select name="year" class="custom-select">
-						<option value="" <c:if test="${list == null }">selected</c:if>>year</option>
-						<option value="2021" <c:if test="${list != null}">selected</c:if>>2021</option>
-						<option value="2020">2020</option>
-						<option value="2019">2019</option>
+						<option value="" <c:if test="${year == null }">selected</c:if>>year</option>
+						<option value="2021" <c:if test="${year == 2021}">selected</c:if>>2021</option>
+						<option value="2020" <c:if test="${year == 2020}">selected</c:if>>2020</option>
+						<option value="2019" <c:if test="${year == 2019}">selected</c:if>>2019</option>
+					</select>
+				</div>
+				<div class="col-sm-1.5 text-left">
+					<select name="month" class="custom-select">
+						<option value="all" <c:if test="${month == null }">selected</c:if>>month</option>
+						<option value="01" <c:if test="${month == 01}">selected</c:if>>1</option>
+						<option value="02" <c:if test="${month == 02}">selected</c:if>>2</option>
+						<option value="03" <c:if test="${month == 03}">selected</c:if>>3</option>
 					</select>
 				</div>
 				<div class="col-sm-9 text-right mb-3">
 					<button type="button" class="btn btn-warning" onClick="selectForm()">照会</button>
 					<button type="button" class="btn btn-primary" onClick="insertForm()">追加</button>
 					<button type="button" class="btn btn-danger" onClick="deleteForm()">削除</button>
-					<button type="button" class="btn btn-success">保存</button>
+					<button type="button" class="btn btn-success" onClick="saveForm()">保存</button>
 				</div>
 			</div>
 
@@ -92,7 +88,12 @@ function selectForm(){
 							<input type="text" name="employeeName" id="employeeName" class="form-control" value="${employeeName}" readonly>
 						</td>
 						<td>
-							<input type="text" name="yearTimeCode" id="yearTimeCode" class="form-control" value="">
+							<select name="yearTimeCode" id="yearTimeCode" class="form-control" onchange="categoryChange(this)" style="width:115px;">
+								<option value="" >選択</option>
+								<c:forEach var="type" items="${type }">
+									<option value="${type.code }" >${type.codeName }</option>
+								</c:forEach>
+							</select>
 						</td>
 						<td>
 							<input type="text" name="fromDate" id="fromDate" class="form-control" value="">
@@ -101,13 +102,15 @@ function selectForm(){
 							<input type="text" name="toDate" id="toDate" class="form-control" value="">
 						</td>
 						<td>
-							<input type="text" name="grounds" id="grounds" class="form-control" value="">
+							<select name="grounds" id="grounds" class="form-control" style="width:115px;">
+								<option value="" ></option>
+							</select>
 						</td>
 						<td>
 							<input type="text" name="days" id="days" class="form-control" value="" readonly>
 						</td>
 						<td>
-							<input type="text" class="form-control" value="" readonly>
+							<input type="text" class="form-control" value="申請" readonly>
 						</td>
 					</tr>
 					<!-- empyearfreetimeテーブルのリスト出力 -->
@@ -119,13 +122,17 @@ function selectForm(){
 								</td>
 								<td>${list.seriesNum }</td>
 								<td>${list.employeeName }</td>
-								<td>${list.yearTimeCode }</td>
+								<td>${list.codeName }</td>
 								<!-- timestamp型のデータを希望する形式で出力 -->
 								<td>${list.fromDate.substring(0, 10)}</td>
 								<td>${list.toDate.substring(0, 10) }</td>
 								<td>${list.grounds }</td>
 								<td>${list.days }</td>
-								<td>${list.approvalCode }</td>
+								<td>
+									<c:if test="${list.approvalCode == 0 }">待機</c:if>
+									<c:if test="${list.approvalCode == 1 }">承認</c:if>
+									<c:if test="${list.approvalCode == 2 }">拒否</c:if>
+								</td>
 							</tr>
 						</c:forEach>
 					</c:if>

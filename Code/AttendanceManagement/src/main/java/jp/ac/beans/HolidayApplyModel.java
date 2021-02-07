@@ -9,7 +9,7 @@ public class HolidayApplyModel {		//社員年暇テーブル
 	private int employeeId;				//社員ID
 	private String employeeName;		//社員名
 	private int yearTimeCode;			//年暇コード
-	private String fromDate;				//開始日
+	private String fromDate;			//開始日
 	private String toDate;				//終了日
 	private String grounds;				//事由
 	private int days;					//日数
@@ -20,4 +20,6 @@ public class HolidayApplyModel {		//社員年暇テーブル
 	private Timestamp updatedTime;		//更新日時
 	
 	private String year;
+	private int code;
+	private String codeName;
 }

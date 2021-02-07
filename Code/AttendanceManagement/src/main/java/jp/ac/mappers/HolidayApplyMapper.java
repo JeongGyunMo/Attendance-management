@@ -16,10 +16,10 @@ public interface HolidayApplyMapper {
 	public void holidayInsert(HolidayApplyModel model);
 	
 	//申請リスト
-	public List<HolidayApplyModel> holidayList(int employeeId);
+	public List<HolidayApplyModel> holidayList(int employeeId, String year, String month);
 	
 	//申請リスト
-	public List<HolidayApplyModel> holidaySelect(String year);
+	public List<HolidayApplyModel> holidayType();
 		
 	//リスト削除
 	public int holidayDelete(int seriesNum);

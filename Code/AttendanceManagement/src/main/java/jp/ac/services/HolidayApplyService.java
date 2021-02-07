@@ -32,13 +32,13 @@ public class HolidayApplyService {
 	}
 	
 	//申請リスト
-	public List<HolidayApplyModel> holidayList(int employeeId) {
-		return mapper.holidayList(employeeId);
+	public List<HolidayApplyModel> holidayList(int employeeId, String year, String month) {
+		return mapper.holidayList(employeeId, year, month);
 	}
 	
 	//申請リスト
-	public List<HolidayApplyModel> holidaySelect(String year){
-		return mapper.holidaySelect(year);
+	public List<HolidayApplyModel> holidayType(){
+		return mapper.holidayType();
 	}
 		
 	//リスト削除

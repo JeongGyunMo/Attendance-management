@@ -25,18 +25,18 @@ public class TimeService {
 	}
 	// 出勤時間記録
 
-	public String Clocksavelea(Timestamp clock,Date day, int id) throws Exception {
-		return TimeMapper.clockSaveLea(clock,day, id);
+	public String Clocksavelea(Timestamp clock, Timestamp attend, int id) throws Exception {
+		return TimeMapper.clockSaveLea(clock, attend, id);
 	}
 	// 退勤時間記録
 	
-	public String Submit(String submit, int id, Date day) throws Exception {
-		return TimeMapper.submit(submit, id, day);
+	public String Submit(String submit, int id, Timestamp attend) throws Exception {
+		return TimeMapper.submit(submit, id, attend);
 	}
 	// 勤務内容
 	
-	public String Overwork(Timestamp start,Timestamp end, String overclass,  int id) throws Exception {
-		return TimeMapper.Overwork(start, end, overclass, id);
+	public String modificationTime(Timestamp start,Timestamp end, String modificationClass,  int id, Timestamp attend) throws Exception {
+		return TimeMapper.modificationTime(start, end, modificationClass, id, attend);
 	}
-	// 超過勤務追加
+	// 勤務修正
 }

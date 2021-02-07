@@ -114,3 +114,45 @@ function insertForm() {
 
 	holidayForm.submit();
 }
+
+function selectForm(){
+	if(holidayForm.year.value == ""){
+		alert("年度を選択してください。");
+		holidayForm.year.focus();
+		return;
+	}
+	
+	holidayForm.action = "holidaySelect";
+	holidayForm.submit();
+}
+
+function categoryChange(type) {
+	var grounds_1001 = ["旅行", "帰国"];
+	var grounds_1002 = ["出産", "育児"];
+	var grounds_1003 = ["本人結婚", "知人結婚", "知人死亡"];
+	var grounds_1004 = ["健康診断", "手術"];
+	var grounds_1005 = ["その他"];
+	var target = document.getElementById("grounds");
+
+	if(type.value == "1001") var d = grounds_1001;
+	else if(type.value == "1002") var d = grounds_1002;
+	else if(type.value == "1003") var d = grounds_1003;
+	else if(type.value == "1004") var d = grounds_1004;
+	else if(type.value == "1005") var d = grounds_1005;
+
+	target.options.length = 0;
+
+	for (x in d) {
+		var opt = document.createElement("option");
+		opt.value = d[x];
+		opt.innerHTML = d[x];
+		target.appendChild(opt);
+	}	
+}
+
+function saveForm() {
+	if (confirm("保存しますか？")) {
+		holidayForm.action = "holidaySave";
+		holidayForm.submit();
+	}
+}

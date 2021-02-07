@@ -8,12 +8,12 @@ public interface TimeMapper {
 	public String clockSaveAtt(Timestamp clock, int id) throws Exception;
 	// 出勤時間記録
 
-	public String clockSaveLea(Timestamp clock,Date day, int id) throws Exception;
+	public String clockSaveLea(Timestamp clock, Timestamp attend, int id) throws Exception;
 	// 退勤時間記録
 	
-	public String submit(String submit, int id, Date day) throws Exception;
+	public String submit(String submit, int id, Timestamp attend) throws Exception;
 	// 勤務内容
 	
-	public String Overwork(Timestamp start,Timestamp end, String overclass,  int id) throws Exception;
-	// 超過勤務追加
+	public String modificationTime(Timestamp start,Timestamp end, String modificationClass,  int id, Timestamp attend) throws Exception;
+	//勤務修正
 }

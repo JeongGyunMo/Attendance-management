@@ -5,12 +5,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Locale;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import jp.ac.beans.AttSelectModel;
 import jp.ac.beans.LoginModel;
@@ -24,7 +27,7 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 public class PageController {
-    
+	
     @RequestMapping(value = "/休日管理(月)" , method = RequestMethod.GET) 
     public String 休日管理() throws Exception {
         return "休日管理(月)";
@@ -44,7 +47,6 @@ public class PageController {
 //    public String 職員勤務照会() throws Exception {
 //        return "職員勤務照会";
 //    }
-
     
     @RequestMapping(value = "/個人休暇申請" , method = RequestMethod.GET) 
     public String 個人休暇申請() throws Exception {

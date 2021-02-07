@@ -4,6 +4,10 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page import="java.util.Date"%>
 <%@ page import="java.text.SimpleDateFormat"%>
+<%
+	Date Today = new Date();
+	SimpleDateFormat Format = new SimpleDateFormat("yyyy-MM-dd");
+%>
 <!DOCTYPE html>
 <head>
 <title>勤務登録</title>
@@ -18,7 +22,16 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/static/js/Time.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/static/js/Calendar.js"></script>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/static/css/style.css">
 </head>
 
 <body>
@@ -27,8 +40,6 @@
 		<h1>勤務登録</h1>
 		<p>Resize this responsive page to see the effect!</p>
 	</div>
-	
-						
 	<!--▲▲▲ヘッダ▲▲▲-->
 
 	<!--▼▼▼ボディ▼▼▼-->
@@ -52,106 +63,126 @@
 	<!--▼▼▼ボタンはこの行に記述してください。▼▼▼-->
 	<div class="container text-center">
 		<div class="row">
-			<span id="kCalendar" class="cnj_input" style="width: 35%"></span>
+			<div id="datepicker"></div>
 			<div class="col-md-7 col-sm-12">
 				<div class="text-right mb-3">
 					<button type="button" class="btn btn-primary"
 						onClick="location.href='attSelect'">月別勤務照会</button>
 					<button type="button" class="btn btn-success" onClick="attTime()">出勤</button>
-					<button type="button" class="btn btn-danger" onClick="leaTime()">退勤</button>
+					<c:choose>
+						<c:when test="${Date ne NowDate}">
+							<button type="button" class="btn btn-danger" onClick="errMag()">退勤</button>
+						</c:when>
+						<c:otherwise>
+							<button type="button" class="btn btn-danger" onClick="leaTime()">退勤</button>
+						</c:otherwise>
+					</c:choose>
 				</div>
-				<table class="table table-striped table-hover mb-5">
+				<table class="table table-striped table-hover mb-5"
+					id="table table-striped table-hover mb-5">
 					<colgroup>
 						<col width="40%">
 					</colgroup>
 					<tbody class="table-striped2">
-							<c:choose>
-								<c:when
-									test="${list.attendTime ne '1970-01-01 00:00:00.0' && list.leaveTime ne '1970-01-01 00:00:00.0' && not empty list.attendTime && not empty list.leaveTime && Date eq NowDate}">
-									<tr>
-										<th>出勤時間</th>
-										<td><fmt:formatDate pattern="HH:mm"
-												value="${list.attendTime}" /></td>
-									</tr>
-									<tr>
-										<th>退勤時間</th>
-										<td><fmt:formatDate pattern="HH:mm"
-												value="${list.leaveTime}" /></td>
-									</tr>
-																		<tr>
-										<th>業務内容</th>
-										<td><input type="text" name="content" id="content"
-											class="form-control" value="">
-											<button type="button" class="btn btn-success"
-												onClick="submit()">登録</button></td>
-									</tr>
-								</c:when>
-								<c:when test="${list.leaveTime eq '1970-01-01 00:00:00.0' && list.attendTime ne '1970-01-01 00:00:00.0'}">
-									<tr>
-										<th>出勤時間</th>
-										<td><fmt:formatDate pattern="HH:mm"
-												value="${list.attendTime}" /></td>
-									</tr>
-									<tr>
-										<th>退勤時間</th>
-										<td>
-											<div id="leaClock" class="clock"></div>
-										</td>
-									</tr>
-									<tr>
-										<th>業務内容</th>
-										<td><input type="text" name="content" id="content"
-											class="form-control" value="">
-											<button type="button" class="btn btn-success"
-												onClick="submit()">登録</button></td>
-									</tr>
-								</c:when>
-								<c:otherwise>
-									<tr>
-										<th>出勤時間</th>
-										<td>
-											<div id="attClock" class="clock"></div>
-										</td>
-									</tr>
-									<tr>
-										<th>退勤時間</th>
-										<td>
-											<div id="leaClock" class="clock"></div>
-										</td>
-									</tr>
-									<tr>
-										<th>業務内容</th>
-										<td><input type="text" name="content" id="content"
-											class="form-control" value="">
-											<button type="button" class="btn btn-success"
-												onClick="submit()">登録</button></td>
-									</tr>
-								</c:otherwise>
-							</c:choose>
-					</tbody>
-				</table>
-				<button type="button" class="btn btn-primary btn-block btn-lg mb-5"
-					onClick="overTime()">超過勤務追加</button>
-				<table class="table table-striped table-hover mb-5">
-					<colgroup>
-						<col width="40%">
-					</colgroup>
-					<tbody class="table-striped2">
-						<tr>
-							<th>開始時間</th>
-							<td><input type="text" name="start" id="start"
-								class="form-control" value=""></td>
-						</tr>
-						<tr>
-							<th>終了時間</th>
-							<td><input type="text" name="end" id="end"
-								class="form-control" value=""></td>
-						</tr>
-						<tr>
-							<th>業務内容</th>
-							<td><input type="text" name="overclass" id="overclass"
-								class="form-control" value=""></td>
-						</tr>
+						<c:choose>
+							<c:when test="${Bri eq true }">
+								<tr>
+									<th>出勤時間</th>
+									<td><fmt:formatDate pattern="HH:mm"
+											value="${list.attendTime}" /></td>
+								</tr>
+								<tr>
+									<th>退勤時間</th>
+									<td><fmt:formatDate pattern="HH:mm"
+											value="${list.leaveTime}" /></td>
+								</tr>
+								<tr>
+									<th>業務内容</th>
+									<td><select name="content">
+											<option value="">-- 選択してください --</option>
+											<option value="2001">社内勤務</option>
+											<option value="2002">派遣勤務</option>
+											<option value="2003">その他</option>
+									</select>
+										<button type="button" class="btn btn-success"
+											onClick="submit()">登録</button></td>
+								</tr>
+							</c:when>
+							<c:when
+								test="${list.attendTime ne '1970-01-01 00:00:00.0' && list.leaveTime ne '1970-01-01 00:00:00.0' && not empty list.attendTime && not empty list.leaveTime && Date eq NowDate}">
+								<tr>
+									<th>出勤時間</th>
+									<td><fmt:formatDate pattern="HH:mm"
+											value="${list.attendTime}" /></td>
+								</tr>
+								<tr>
+									<th>退勤時間</th>
+									<td><fmt:formatDate pattern="HH:mm"
+											value="${list.leaveTime}" /></td>
+								</tr>
+								<tr>
+									<th>業務内容</th>
+									<td><select name="content">
+											<option value="">-- 選択してください --</option>
+											<option value="2001">社内勤務</option>
+											<option value="2002">派遣勤務</option>
+											<option value="2003">その他</option>
+									</select>
+										<button type="button" class="btn btn-success"
+											onClick="submit()">登録</button></td>
+								</tr>
+							</c:when>
+							<c:when
+								test="${list.leaveTime eq '1970-01-01 00:00:00.0' && list.attendTime ne '1970-01-01 00:00:00.0'}">
+								<tr>
+									<th>出勤時間</th>
+									<td><fmt:formatDate pattern="HH:mm"
+											value="${list.attendTime}" /></td>
+								</tr>
+								<tr>
+									<th>退勤時間</th>
+									<td>
+										<div id="leaClock" class="clock"></div>
+									</td>
+								</tr>
+								<tr>
+									<th>業務内容</th>
+									<td><select name="content">
+											<option value="">-- 選択してください --</option>
+											<option value="2001">社内勤務</option>
+											<option value="2002">派遣勤務</option>
+											<option value="2003">その他</option>
+									</select>
+										<button type="button" class="btn btn-success"
+											onClick="submit()">登録</button></td>
+								</tr>
+							</c:when>
+							<c:otherwise>
+								<tr>
+									<th>出勤時間</th>
+									<td>
+										<div id="attClock" class="clock"></div>
+									</td>
+								</tr>
+								<tr>
+									<th>退勤時間</th>
+									<td>
+										<div id="leaClock" class="clock"></div>
+									</td>
+								</tr>
+								<tr>
+									<th>業務内容</th>
+									<td><select name="content">
+											<option value="">-- 選択してください --</option>
+											<option value="2001">社内勤務</option>
+											<option value="2002">派遣勤務</option>
+											<option value="2003">その他</option>
+									</select>
+										<button type="button" class="btn btn-success"
+											onClick="submit()">登録</button></td>
+								</tr>
+							</c:otherwise>
+						</c:choose>
 					</tbody>
 				</table>
 			</div>

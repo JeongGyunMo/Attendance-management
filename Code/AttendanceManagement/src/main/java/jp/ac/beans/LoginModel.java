@@ -1,9 +1,10 @@
 package jp.ac.beans;
 
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 @Data
+@RequiredArgsConstructor
 public class LoginModel {
-	private String id; 			//社員ID;
-	private String passWord; 	//部署コード;
-
+	private final String id; 			//社員ID;
+	private final String passWord; 	//部署コード;
 }
