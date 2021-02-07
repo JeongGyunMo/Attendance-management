@@ -1,0 +1,9 @@
+이클립스 버전
+Eclipse Java EE IDE for Web Developers.
+Version: 4.13.0.20190917-0000
+
+A5:SQL Mk-2 에서 postgreSQL 연동 방법
+https://yu-report.com/entry/A5connect
+
+Tomcat 설치
+https://offbyone.tistory.com/321
