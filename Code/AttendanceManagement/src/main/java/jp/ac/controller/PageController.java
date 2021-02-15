@@ -35,7 +35,7 @@ public class PageController {
 
     @RequestMapping(value = "/共通コード" , method = RequestMethod.GET) 
     public String 共通コード() throws Exception {
-        return "共通コード";
+        return "commonCode";
     }
     
     @RequestMapping(value = "/職員管理" , method = RequestMethod.GET) 
