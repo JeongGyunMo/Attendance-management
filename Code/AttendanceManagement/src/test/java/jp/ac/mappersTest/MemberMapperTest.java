@@ -1,27 +1,28 @@
-package jp.ac.servicesTest;
-
-import static org.junit.Assert.assertEquals;
+package jp.ac.mappersTest;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import jp.ac.beans.MemberModel;
 import jp.ac.mappers.MemberMapper;
-
+import lombok.extern.java.Log;
+@Log
+@SpringBootTest
 @RunWith(SpringRunner.class)
-public class MemberServiceTest {
+public class MemberMapperTest {
 	// given 準備
-	@MockBean
+	@Autowired
 	MemberMapper MemberMapper;
+	
 	private MemberModel initData;
+	
 	@Before
-    public void setup() {
+    public void setup() throws Exception {
         initData = new MemberModel();
-        //initData.setEmployeeId(1);
+        initData.setEmployeeId(2);
         initData.setDepartCode("12");
         initData.setEmployName("jgm");
         initData.setLoginId("q");
@@ -39,11 +40,7 @@ public class MemberServiceTest {
 	public void create() throws Exception {
 		MemberMapper.save(initData);
 		// then 結果
-		System.out.println("비교 시작");
-		assertEquals("비교","jgm",initData.getEmployName());
-		assertEquals("12",initData.getDepartCode());
+		log.info("-------------------------");
+		log.info("result: " + initData.getEmployName());
 	}
-	
-	
-	
 }

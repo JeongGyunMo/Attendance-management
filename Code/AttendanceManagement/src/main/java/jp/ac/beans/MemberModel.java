@@ -11,7 +11,7 @@ public class MemberModel {
 	private String loginId; //ログインID;
 	private String loginPass; //ログインパスワード;
 	private String phonetic; //フリガナ;
-	private String zipCode; //郵便番号;
+	private String zipcode; //郵便番号;
 	private String address1; //住所1;
 	private String address2; //住所2;
 	private String phoneNum; //電話番号;

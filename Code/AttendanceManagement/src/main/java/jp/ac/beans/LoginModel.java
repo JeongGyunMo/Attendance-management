@@ -5,6 +5,6 @@ import lombok.RequiredArgsConstructor;
 @Data
 @RequiredArgsConstructor
 public class LoginModel {
-	private final String id; 			//社員ID;
-	private final String passWord; 	//部署コード;
+	private final String id;
+	private final String passWord;
 }

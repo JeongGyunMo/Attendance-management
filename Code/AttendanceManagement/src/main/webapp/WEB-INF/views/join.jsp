@@ -33,16 +33,16 @@
 			<input type="text" class="input-field" id="employeeId" name="employeeId">
 			<p>
 			<label>部署コード</label>
-			<input type="text" class="input-field" id="departcode" name="departcode">
+			<input type="text" class="input-field" id="departCode" name="departCode">
 			<p>
 			<label>社員名</label>
 			<input type="text" class="input-field" id="employName" name="employName">
 			<p>
 			<label>ログインID</label>
-			<input type="text" class="input-field" id="loginid" name="loginid">
+			<input type="text" class="input-field" id="loginId" name="loginId">
 			<p>
 			<label>ログインパスワード</label>
-			<input type="text" class="input-field" id="loginpass" name="loginpass">
+			<input type="text" class="input-field" id="loginPass" name="loginPass">
 			<p>
 			<label>フリガナ</label>
 			<input type="text" class="input-field" id="phonetic" name="phonetic">
@@ -57,10 +57,10 @@
 			<input type="text" class="input-field" id="address2" name="address2">
 			<p>
 			<label>電話番号</label>
-			<input type="text" class="input-field" id="phonenum" name="phonenum">
+			<input type="text" class="input-field" id="phoneNum" name="phoneNum">
 			<p>
 			<label>携帯番号</label>
-			<input type="text" class="input-field" id="mobilenum" name="mobilenum">
+			<input type="text" class="input-field" id="mobileNum" name="mobileNum">
 			<p>
 			<label>メール</label>
 			<input type="text" class="input-field" id="email" name="email">
